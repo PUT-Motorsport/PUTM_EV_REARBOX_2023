@@ -196,10 +196,10 @@ void Error_Handler(void);
 #define PIN_RES 5
 #define PIN_HVD 6
 #define PIN_INV 7
-#define PIN_WHEEL_FL 14
-#define PIN_WHEEL_FR 15
-#define PIN_WHEEL_RL 12
-#define PIN_WHEEL_RR 13
+#define PIN_WHEEL_FL 12
+#define PIN_WHEEL_FR 13
+#define PIN_WHEEL_RL 14
+#define PIN_WHEEL_RR 15
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
