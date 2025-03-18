@@ -6,6 +6,13 @@
 /firmware/Middlewares/
 /firmware/*.launch
 
+# VsCode
+/firmware/.vscode
+/firmaware/build
+/firemware/CMakeFiles
+/firmware/Debug
+/firmware/Middlewares/
+
 # KiCad
 /hardware/*/*-backups/
 /hardware/*/*.kicad_prl

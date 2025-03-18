@@ -1,0 +1,7 @@
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/CMakeFiles/rearbox.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/CMakeFiles/edit_cache.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/CMakeFiles/rebuild_cache.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/michal/Desktop/PUTMotorsport/RearBox/PUTM_EV_REARBOX_2025/firmware/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
