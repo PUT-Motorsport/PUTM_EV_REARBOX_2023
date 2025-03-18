@@ -94,7 +94,8 @@ void Interface_Task(void* argument) {
 
             if(data.rtd) {
                 if(xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION) {
-                    data.rtd = false;
+                    //data.rtd = false;
+                	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
                 }
             }
 
