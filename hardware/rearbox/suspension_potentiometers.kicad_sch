@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7794878f-0ef3-46d5-a3b2-c714cd7773de")
 	(paper "A4")
 	(title_block
@@ -13,9 +13,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:D_TVS"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -83,10 +87,10 @@
 			(symbol "D_TVS_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -107,10 +111,10 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -156,11 +160,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:NetTie_2"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
@@ -277,11 +286,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -399,6 +413,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Power_Ports:+5V_EXT"
 			(power)
@@ -476,7 +491,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -488,7 +503,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -502,7 +517,8 @@
 			(symbol "+5V_EXT_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V_EXT"
 						(effects
 							(font
@@ -519,6 +535,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -598,7 +615,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -615,7 +633,72 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Rx\n5k"
+		(exclude_from_sim no)
+		(at 112.395 80.645 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "204df086-5294-41aa-bba2-ee87c9fb9013")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 166.37 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d7f4f3a-ca4c-464b-98f2-6988c63ec3c7")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 166.37 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5066353-2e42-4a01-8374-14e93b57869c")
+	)
+	(text "Rx\n5k"
+		(exclude_from_sim no)
+		(at 112.395 128.905 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c5fe69d8-c3bd-4b7e-8001-31bf6f936a47")
+	)
+	(text_box "Resistance range (roughly estimated):\n1000 to 4000 Ω\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(1000 * 4000) ≈ 2 kΩ\n\nOutput range:\n1.9 V to 0.238 V"
+		(exclude_from_sim no)
+		(at 33.02 35.56 0)
+		(size 39.37 22.86)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f05285df-6858-4f5c-885e-5e9c72a5d154")
 	)
 	(junction
 		(at 121.92 64.77)
@@ -1245,72 +1328,8 @@
 		)
 		(uuid "f935a19e-187b-4230-956c-c75e31476c07")
 	)
-	(text_box "Resistance range (roughly estimated):\n1000 to 4000 Ω\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(1000 * 4000) ≈ 2 kΩ\n\nOutput range:\n1.9 V to 0.238 V"
-		(exclude_from_sim no)
-		(at 33.02 35.56 0)
-		(size 39.37 22.86)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "f05285df-6858-4f5c-885e-5e9c72a5d154")
-	)
-	(text "Rx\n5k"
-		(exclude_from_sim no)
-		(at 112.395 80.645 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "204df086-5294-41aa-bba2-ee87c9fb9013")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 166.37 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7d7f4f3a-ca4c-464b-98f2-6988c63ec3c7")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 166.37 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c5066353-2e42-4a01-8374-14e93b57869c")
-	)
-	(text "Rx\n5k"
-		(exclude_from_sim no)
-		(at 112.395 128.905 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c5fe69d8-c3bd-4b7e-8001-31bf6f936a47")
-	)
 	(label "P2"
 		(at 157.48 118.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1321,7 +1340,6 @@
 	)
 	(label "N2"
 		(at 119.38 121.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1332,7 +1350,6 @@
 	)
 	(label "N1"
 		(at 119.38 73.66 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1343,7 +1360,6 @@
 	)
 	(label "P1"
 		(at 124.46 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1354,7 +1370,6 @@
 	)
 	(label "N2"
 		(at 153.67 124.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1365,7 +1380,6 @@
 	)
 	(label "N1"
 		(at 153.67 76.2 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1376,7 +1390,6 @@
 	)
 	(label "P2"
 		(at 124.46 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1387,7 +1400,6 @@
 	)
 	(label "P1"
 		(at 157.48 69.85 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1399,7 +1411,6 @@
 	(hierarchical_label "OUT_R"
 		(shape output)
 		(at 184.15 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1411,7 +1422,6 @@
 	(hierarchical_label "OUT_L"
 		(shape output)
 		(at 184.15 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1423,7 +1433,6 @@
 	(hierarchical_label "IN_R"
 		(shape input)
 		(at 109.22 121.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1435,7 +1444,6 @@
 	(hierarchical_label "IN_L"
 		(shape input)
 		(at 109.22 73.66 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1667,7 +1675,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ad0adfc-aba7-434a-9012-7b9221c8b9a5")
-		(property "Reference" "R?"
+		(property "Reference" "R116"
 			(at 131.318 66.1416 0)
 			(effects
 				(font
@@ -1771,7 +1779,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "31dcaa53-031b-4589-98df-b04056950472")
-		(property "Reference" "R?"
+		(property "Reference" "R117"
 			(at 131.318 76.3016 0)
 			(effects
 				(font
@@ -2075,7 +2083,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4d8b5f89-2ad0-442d-ae03-993e35a7acda")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0227"
 			(at 121.92 138.43 0)
 			(effects
 				(font
@@ -2166,7 +2174,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "717fadc7-20ec-4e68-b3da-55e9d120a96d")
-		(property "Reference" "R?"
+		(property "Reference" "R118"
 			(at 131.318 114.4016 0)
 			(effects
 				(font
@@ -2336,7 +2344,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c57bd34-157c-4232-a596-ac3e443ae89b")
-		(property "Reference" "R?"
+		(property "Reference" "R115"
 			(at 112.522 114.4016 0)
 			(effects
 				(font
@@ -2440,7 +2448,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c9acb1fb-afff-49fb-a328-7edde39b69d5")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0225"
 			(at 121.92 90.17 0)
 			(effects
 				(font
@@ -2532,7 +2540,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e3adc94c-da2f-4501-91ba-e2a52f1ef101")
-		(property "Reference" "R?"
+		(property "Reference" "R114"
 			(at 112.522 66.1416 0)
 			(effects
 				(font
@@ -2636,7 +2644,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e97093e6-4af8-414e-a4e9-aadc15bbf9a9")
-		(property "Reference" "R?"
+		(property "Reference" "R119"
 			(at 131.318 124.5616 0)
 			(effects
 				(font
@@ -2813,6 +2821,10 @@
 	(sheet
 		(at 158.75 114.3)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2842,33 +2854,33 @@
 		)
 		(pin "+" input
 			(at 158.75 118.11 180)
+			(uuid "f65bedc7-35e9-45de-80a3-a1acae6d781d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f65bedc7-35e9-45de-80a3-a1acae6d781d")
 		)
 		(pin "OUT" output
 			(at 182.88 118.11 0)
+			(uuid "65ef117e-d11c-4ea0-b9f8-ec94479e08c1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "65ef117e-d11c-4ea0-b9f8-ec94479e08c1")
 		)
 		(pin "-" input
 			(at 158.75 124.46 180)
+			(uuid "232a53df-4795-4b6c-a07b-ec83a7bdbbe3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "232a53df-4795-4b6c-a07b-ec83a7bdbbe3")
 		)
 		(instances
 			(project "rearbox"
@@ -2881,6 +2893,10 @@
 	(sheet
 		(at 158.75 66.04)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2910,33 +2926,33 @@
 		)
 		(pin "+" input
 			(at 158.75 69.85 180)
+			(uuid "3cdafcb9-724a-4eec-b4e2-83072860eb18")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3cdafcb9-724a-4eec-b4e2-83072860eb18")
 		)
 		(pin "OUT" output
 			(at 182.88 69.85 0)
+			(uuid "9f8297c2-c7c4-4e98-add6-927a0e1655cf")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "9f8297c2-c7c4-4e98-add6-927a0e1655cf")
 		)
 		(pin "-" input
 			(at 158.75 76.2 180)
+			(uuid "c3783da3-55e7-42dc-b976-53dc3cec3748")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c3783da3-55e7-42dc-b976-53dc3cec3748")
 		)
 		(instances
 			(project "rearbox"

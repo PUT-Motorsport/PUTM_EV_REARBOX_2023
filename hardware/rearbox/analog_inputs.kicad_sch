@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7794878f-0ef3-46d5-a3b2-c714cd7773de")
 	(paper "A4")
 	(title_block
@@ -13,9 +13,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:D_TVS"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -83,10 +87,10 @@
 			(symbol "D_TVS_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -107,10 +111,10 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -156,11 +160,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -278,6 +287,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3VA"
 			(power)
@@ -355,7 +365,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -367,7 +377,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -381,7 +391,8 @@
 			(symbol "+3.3VA_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3.3VA"
 						(effects
 							(font
@@ -398,6 +409,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -477,7 +489,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -494,7 +507,72 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "PT100"
+		(exclude_from_sim no)
+		(at 170.18 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3d6eef0c-d3ea-4036-a526-1920ddf9e365")
+	)
+	(text "PT100"
+		(exclude_from_sim no)
+		(at 170.18 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5b6f8dad-5e3e-4955-adf2-d8a7cb848e9d")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 204.47 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c7ea088-afab-4c0b-b7bd-b95ca7768e4d")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 204.47 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c846c4ab-b465-4ff8-860c-caf60a6169f0")
+	)
+	(text_box "Resistance range:\n110 to 150 Ω\n(25 to 130 °C)\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(110 * 150) ≈ 120 Ω\n\nOutput range:\n1.578 V to 1.833 V"
+		(exclude_from_sim no)
+		(at 48.26 99.06 0)
+		(size 31.75 22.86)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "853db02f-da39-46fc-989c-870a2bb20cf7")
 	)
 	(junction
 		(at 182.88 66.04)
@@ -2715,76 +2793,30 @@
 			"BvXgqTg9lbdXoRz96Kh2bsricDgcDofD+aRAZqnIM0i+Q8YDsDgcDofD4XA+HmSlglfw7zFYyWQS"
 			"FqxEIhEKhXw+Hz6Lx+MT2VgOh8PhcDiczwIIbPf5fJFIRK1WC4KQTCZVsF0xxpRKZTAYDAaDE91O"
 			"DofD4XA4nM8earWaSVFZPNCKw+FwOBwOZ4zhAovD4XA4HA5njOECi8PhcDgcDmeM+X+zbrmZJZpn"
-			"oAAAAABJRU5ErkJggg=="
+			"oAAAAABJRU5ErkJgggB5AGsAZABHAEgAagBFAHQAWABzAC8AMQBRADYAUQBYAHUAQwBTAEoAVQB2"
+			"ADIANwBkAHQASABLAFUAMABrAEUAbgBQAG4AegBwADAAegBaAHcANgBsAEYAQwAxAEgATwBwADMA"
+			"RwBtAFkATwBtAEkAaAA2AFAAKwA2AHUANQBZAEIATQBTAGkAVQBSAFgAVgB4AGMAVwB6AHMARgB6"
+			"AHgAZgBpAGsAMABkAEoAYgBsAGkAVwBQAHYAOABHAEEASAB0AEQARAB2AGoAVgBOAEUAegAwAC8A"
+			"bgBQAGwAWQBTAGsAUAA0AGEAbAA3AEwASAB3AFoASwBUAHIAbQBDAGwAKwBWAGUANQBTAHQAbwBQ"
+			"AEgAQQBzAG8AWgA0AEMAZwBKAGEAVwBGAGsAMwBUAEUAbwBsAEUASwBCAFIAeQBIAEMAZQBUAHkA"
+			"ZQBCAGkARQBaAFAATgAwAFgASABCAFQAOAA1AFoAaQAzAEMANwBXAGQATwAwADkAdgBiADIAKwAr"
+			"ACsALwAzADcASwBzADIAMgArAC8AMwBYADgATQBWAGcAaQBSAFMAcQBWAFEAVABqAFEAcQBpAFUA"
+			"UQBDAGoAUwBWAGEAUgB3AEQAQQBrADAAbwBZAHgARQBhAGoAdwBuAE4AeQAxAFkAegBVAHkANAA3"
+			"AGoALwBPAGQALwAvAGkAZQBHAEUAOQA1ADcANwA3ADMANwA3ADcAKwAvAHAAYQBYAGwAYQAxAC8A"
+			"NwBHAHEANABpAG8AdABGAG8ASwBCAFQAQwB1AFUAQQBwAFAAWAByADAASwBNADYAVQBhAEQAUwBL"
+			"AEUAMQBrACsAeABGAGcAcwBoAHMAOABsAE4AMQBkAGQAeQBRAEcAOABZAGMATwBHAFAALwAvADUA"
+			"egA5AC8AKwA5AHIAZQBMAGkANAB2AFIAKwBLAEcASAB4ADMAMQBsADEAYwBMAGgATQBQAGEAcQBw"
+			"AG0AbQBIAEQAeAAvAEcANgBqAGgAeQArAHcAWgA3ADMAbgBYAGQAegBzADUATwBUAE8ARABJAHcA"
+			"VQBGAFUAcQBRAEIAeAB3AE0AeQBmAFAAMwAvACsALwBQAGsAbwBlAFUAdABMAHkANgBKAEYAaQA3"
+			"AFoAdAAyADcAWgByADEANgA0AHgAWQA4AGEAawAwADIAbABaAHoAUQBnAEoAQgBBAEoAeQBKADEA"
+			"bwBlAFUAawBOAEYAaABNAEcAVgAzAEIAdwB5AGsASQA4AEEAbABZAHoAcgB1AGkATgBIAGoAdgB6"
+			"AFcAdAA3ADYARgBSAFIAYQBhAG0ANQB1AC8ALwBlADEAdgBiADkAbQB5ADUAYwBZAGIAYgA4AFQA"
+			"cABpAFIATQBCAGQAdw=="
 		)
-	)
-	(text_box "Resistance range:\n110 to 150 Ω\n(25 to 130 °C)\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(110 * 150) ≈ 120 Ω\n\nOutput range:\n1.578 V to 1.833 V"
-		(exclude_from_sim no)
-		(at 48.26 99.06 0)
-		(size 31.75 22.86)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "853db02f-da39-46fc-989c-870a2bb20cf7")
-	)
-	(text "PT100"
-		(exclude_from_sim no)
-		(at 170.18 73.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3d6eef0c-d3ea-4036-a526-1920ddf9e365")
-	)
-	(text "PT100"
-		(exclude_from_sim no)
-		(at 170.18 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5b6f8dad-5e3e-4955-adf2-d8a7cb848e9d")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 204.47 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7c7ea088-afab-4c0b-b7bd-b95ca7768e4d")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 204.47 140.97 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c846c4ab-b465-4ff8-860c-caf60a6169f0")
 	)
 	(hierarchical_label "OFFSET2"
 		(shape input)
 		(at 196.85 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2796,7 +2828,6 @@
 	(hierarchical_label "OFFSET1"
 		(shape input)
 		(at 196.85 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2808,7 +2839,6 @@
 	(hierarchical_label "IN2"
 		(shape input)
 		(at 168.91 119.38 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2820,7 +2850,6 @@
 	(hierarchical_label "OUT2"
 		(shape output)
 		(at 223.52 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2832,7 +2861,6 @@
 	(hierarchical_label "IN1"
 		(shape input)
 		(at 168.91 66.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2844,7 +2872,6 @@
 	(hierarchical_label "OUT1"
 		(shape output)
 		(at 223.52 66.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3414,6 +3441,10 @@
 	(sheet
 		(at 198.12 62.23)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3443,33 +3474,33 @@
 		)
 		(pin "+" input
 			(at 198.12 66.04 180)
+			(uuid "6ed34af2-c3ec-4fc7-adfd-1b9f4eff80c1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "6ed34af2-c3ec-4fc7-adfd-1b9f4eff80c1")
 		)
 		(pin "OUT" output
 			(at 222.25 66.04 0)
+			(uuid "db47d7b6-ec98-4457-a273-718747d00db6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "db47d7b6-ec98-4457-a273-718747d00db6")
 		)
 		(pin "-" input
 			(at 198.12 72.39 180)
+			(uuid "9d5aafed-a7c5-4e77-9567-90303276bdc6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "9d5aafed-a7c5-4e77-9567-90303276bdc6")
 		)
 		(instances
 			(project "rearbox"
@@ -3482,6 +3513,10 @@
 	(sheet
 		(at 198.12 115.57)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3511,33 +3546,33 @@
 		)
 		(pin "+" input
 			(at 198.12 119.38 180)
+			(uuid "9ebb7bb2-e364-41d1-9a3b-63e899c057e0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "9ebb7bb2-e364-41d1-9a3b-63e899c057e0")
 		)
 		(pin "OUT" output
 			(at 222.25 119.38 0)
+			(uuid "02c30bae-2dea-4d31-a9cf-b1dd9799730f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "02c30bae-2dea-4d31-a9cf-b1dd9799730f")
 		)
 		(pin "-" input
 			(at 198.12 125.73 180)
+			(uuid "3a24a3a1-9fcf-49c1-90c5-05dc3a6faef1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3a24a3a1-9fcf-49c1-90c5-05dc3a6faef1")
 		)
 		(instances
 			(project "rearbox"

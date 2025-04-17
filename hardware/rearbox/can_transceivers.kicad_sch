@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "1d0a7d7e-e62d-4c2e-854b-5fe215c61f26")
 	(paper "A4")
 	(title_block
@@ -95,7 +95,6 @@
 	(hierarchical_label "CAN2_RX"
 		(shape output)
 		(at 167.64 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -107,7 +106,6 @@
 	(hierarchical_label "CAN2+"
 		(shape bidirectional)
 		(at 196.85 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -119,7 +117,6 @@
 	(hierarchical_label "CAN-"
 		(shape bidirectional)
 		(at 130.81 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -131,7 +128,6 @@
 	(hierarchical_label "CAN2-"
 		(shape bidirectional)
 		(at 196.85 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -143,7 +139,6 @@
 	(hierarchical_label "CAN_RX"
 		(shape output)
 		(at 101.6 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -155,7 +150,6 @@
 	(hierarchical_label "CAN2_TX"
 		(shape input)
 		(at 167.64 92.71 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -167,7 +161,6 @@
 	(hierarchical_label "CAN_TX"
 		(shape input)
 		(at 101.6 92.71 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -179,7 +172,6 @@
 	(hierarchical_label "CAN+"
 		(shape bidirectional)
 		(at 130.81 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -191,6 +183,10 @@
 	(sheet
 		(at 102.87 88.9)
 		(size 26.67 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -219,43 +215,43 @@
 		)
 		(pin "RXD" output
 			(at 102.87 101.6 180)
+			(uuid "17f8f0d2-1f71-4c7d-ac68-e83653577726")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "17f8f0d2-1f71-4c7d-ac68-e83653577726")
 		)
 		(pin "TXD" input
 			(at 102.87 92.71 180)
+			(uuid "e439a16c-db8e-48ea-bc80-31a5dba810be")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e439a16c-db8e-48ea-bc80-31a5dba810be")
 		)
 		(pin "CAN-" bidirectional
 			(at 129.54 101.6 0)
+			(uuid "94a91480-7a49-4f44-9629-e090087e160b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "94a91480-7a49-4f44-9629-e090087e160b")
 		)
 		(pin "CAN+" bidirectional
 			(at 129.54 92.71 0)
+			(uuid "4833ba30-a323-47ef-b776-97e4d346b213")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4833ba30-a323-47ef-b776-97e4d346b213")
 		)
 		(instances
 			(project "suspension_tension_meter"
@@ -273,6 +269,10 @@
 	(sheet
 		(at 168.91 88.9)
 		(size 26.67 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -301,43 +301,43 @@
 		)
 		(pin "RXD" output
 			(at 168.91 101.6 180)
+			(uuid "047e2a6c-c5e2-49e6-b977-7ea9b84ac0d9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "047e2a6c-c5e2-49e6-b977-7ea9b84ac0d9")
 		)
 		(pin "TXD" input
 			(at 168.91 92.71 180)
+			(uuid "4bef073a-7b89-4297-b836-8550ce7aaaa8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4bef073a-7b89-4297-b836-8550ce7aaaa8")
 		)
 		(pin "CAN-" bidirectional
 			(at 195.58 101.6 0)
+			(uuid "83b54b9d-7a81-48dc-b174-c7e77bf3c1d4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "83b54b9d-7a81-48dc-b174-c7e77bf3c1d4")
 		)
 		(pin "CAN+" bidirectional
 			(at 195.58 92.71 0)
+			(uuid "f2aa4e96-31f3-4fb2-aa8f-0c29324e5181")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "f2aa4e96-31f3-4fb2-aa8f-0c29324e5181")
 		)
 		(instances
 			(project "suspension_tension_meter"

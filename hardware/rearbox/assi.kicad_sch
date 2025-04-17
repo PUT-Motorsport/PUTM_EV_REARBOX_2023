@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7794878f-0ef3-46d5-a3b2-c714cd7773de")
 	(paper "A4")
 	(title_block
@@ -13,9 +13,13 @@
 	)
 	(lib_symbols
 		(symbol "BUK6D210:BUK6D210"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -54,7 +58,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "N-channel enhancement mode Field-Effect Transistor (FET) "
+			(property "Description" "N-channel enhancement mode Field-Effect Transistor (FET)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -75,18 +79,6 @@
 			(symbol "BUK6D210_0_1"
 				(polyline
 					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
 					)
 					(stroke
@@ -99,7 +91,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -123,34 +127,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
 					)
 					(stroke
 						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -181,6 +161,63 @@
 						(type outline)
 					)
 				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
@@ -205,41 +242,26 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "BUK6D210_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin passive line
 					(at 2.54 5.08 270)
 					(length 2.54)
@@ -260,7 +282,8 @@
 				)
 				(pin passive line
 					(at 2.54 5.08 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "D"
 						(effects
 							(font
@@ -276,17 +299,56 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "G"
+					(hide yes)
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -313,62 +375,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54) hide
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54) hide
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54) hide
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 2.54 -5.08 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "S"
 						(effects
 							(font
@@ -385,11 +394,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:TestPoint_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -487,11 +501,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -609,6 +628,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -688,7 +708,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -705,7 +726,96 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "+24V"
+		(exclude_from_sim no)
+		(at 131.9784 77.1906 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "05cb3e62-7d7f-435f-95bf-3572c10b2598")
+	)
+	(text "+24V"
+		(exclude_from_sim no)
+		(at 260.2484 84.8106 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13d2bd1a-3a62-4a05-a899-fa28fb6a63ba")
+	)
+	(text "Red Channel"
+		(exclude_from_sim no)
+		(at 75.565 97.536 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a4c7da0-7f92-4703-8643-f36a8b6f1a04")
+	)
+	(text "+24V"
+		(exclude_from_sim no)
+		(at 72.2884 78.3844 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25204b4e-f28d-4c34-acbe-8a081e6f2a9b")
+	)
+	(text "+24V"
+		(exclude_from_sim no)
+		(at 191.643 78.359 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "268ddfde-4e8f-48bc-a3e2-17b46a84922b")
+	)
+	(text "Blue Channel"
+		(exclude_from_sim no)
+		(at 194.945 97.536 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4549a407-3131-480a-a37f-23b2586bc0fb")
+	)
+	(text "Green Channel"
+		(exclude_from_sim no)
+		(at 135.255 97.536 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "87a963db-9a01-4c1c-804c-772430fc3272")
+	)
+	(text "Buzzer"
+		(exclude_from_sim no)
+		(at 263.525 97.536 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba34ad61-c9bf-478c-a4a6-ec240ca9be1e")
 	)
 	(junction
 		(at 106.68 107.95)
@@ -1555,98 +1665,9 @@
 		)
 		(uuid "fc916fa8-9168-4c2d-aede-5d3a779bda62")
 	)
-	(text "+24V"
-		(exclude_from_sim no)
-		(at 131.9784 77.1906 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "05cb3e62-7d7f-435f-95bf-3572c10b2598")
-	)
-	(text "+24V"
-		(exclude_from_sim no)
-		(at 260.2484 84.8106 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "13d2bd1a-3a62-4a05-a899-fa28fb6a63ba")
-	)
-	(text "Red Channel"
-		(exclude_from_sim no)
-		(at 75.565 97.536 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1a4c7da0-7f92-4703-8643-f36a8b6f1a04")
-	)
-	(text "+24V"
-		(exclude_from_sim no)
-		(at 72.2884 78.3844 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "25204b4e-f28d-4c34-acbe-8a081e6f2a9b")
-	)
-	(text "+24V"
-		(exclude_from_sim no)
-		(at 191.643 78.359 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "268ddfde-4e8f-48bc-a3e2-17b46a84922b")
-	)
-	(text "Blue Channel"
-		(exclude_from_sim no)
-		(at 194.945 97.536 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4549a407-3131-480a-a37f-23b2586bc0fb")
-	)
-	(text "Green Channel"
-		(exclude_from_sim no)
-		(at 135.255 97.536 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "87a963db-9a01-4c1c-804c-772430fc3272")
-	)
-	(text "Buzzer"
-		(exclude_from_sim no)
-		(at 263.525 97.536 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ba34ad61-c9bf-478c-a4a6-ec240ca9be1e")
-	)
 	(hierarchical_label "IN_BUZZER"
 		(shape input)
 		(at 219.71 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1658,7 +1679,6 @@
 	(hierarchical_label "IN_G"
 		(shape input)
 		(at 96.52 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1670,7 +1690,6 @@
 	(hierarchical_label "OUT_G"
 		(shape output)
 		(at 119.38 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1682,7 +1701,6 @@
 	(hierarchical_label "IN_R"
 		(shape input)
 		(at 36.83 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1694,7 +1712,6 @@
 	(hierarchical_label "OUT_R"
 		(shape output)
 		(at 59.69 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1706,7 +1723,6 @@
 	(hierarchical_label "OUT_BUZZER"
 		(shape output)
 		(at 242.57 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1718,7 +1734,6 @@
 	(hierarchical_label "IN_B"
 		(shape input)
 		(at 156.21 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1730,7 +1745,6 @@
 	(hierarchical_label "OUT_B"
 		(shape output)
 		(at 179.07 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1882,7 +1896,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "32dc6bec-10e4-49a5-83b8-bc0c7cee5e8f")
-		(property "Reference" "R?"
+		(property "Reference" "R30"
 			(at 171.45 113.03 90)
 			(effects
 				(font
@@ -2042,7 +2056,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "371c4e40-823c-4eaf-8064-8f71625e662a")
-		(property "Reference" "R?"
+		(property "Reference" "R29"
 			(at 161.29 105.41 90)
 			(effects
 				(font
@@ -2115,7 +2129,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "46288bea-8300-4547-a28c-9f253b60f6fb")
-		(property "Reference" "R?"
+		(property "Reference" "R26"
 			(at 52.07 113.03 90)
 			(effects
 				(font
@@ -2188,7 +2202,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "768b923d-4dd5-4fcc-9669-3fcd3dfc444e")
-		(property "Reference" "R?"
+		(property "Reference" "R28"
 			(at 111.76 113.03 90)
 			(effects
 				(font
@@ -2567,7 +2581,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5307fb8-4641-4219-935d-e54932d6c069")
-		(property "Reference" "R?"
+		(property "Reference" "R25"
 			(at 41.91 105.41 90)
 			(effects
 				(font
@@ -2782,7 +2796,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e149af7e-e9bc-482f-837a-7105fe1d689c")
-		(property "Reference" "R?"
+		(property "Reference" "R32"
 			(at 234.95 113.03 90)
 			(effects
 				(font
@@ -3092,7 +3106,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f29c3203-f4c6-41d7-b1cf-a3c0e0935757")
-		(property "Reference" "R?"
+		(property "Reference" "R27"
 			(at 101.6 105.41 90)
 			(effects
 				(font

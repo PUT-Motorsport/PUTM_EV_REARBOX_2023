@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7794878f-0ef3-46d5-a3b2-c714cd7773de")
 	(paper "A4")
 	(title_block
@@ -13,9 +13,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:D_TVS"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -83,10 +87,10 @@
 			(symbol "D_TVS_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -107,10 +111,10 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -156,11 +160,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:NetTie_2"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
@@ -277,11 +286,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -399,6 +413,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Power_Ports:+5V_EXT"
 			(power)
@@ -476,7 +491,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -488,7 +503,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -502,7 +517,8 @@
 			(symbol "+5V_EXT_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V_EXT"
 						(effects
 							(font
@@ -519,6 +535,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -598,7 +615,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -615,7 +633,114 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 234.95 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "19cfd43c-62da-4295-8404-35c0958823f7")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 234.95 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d7dbcff-d88b-460d-83dd-d2ffdd80f987")
+	)
+	(text "NTC\n2k"
+		(exclude_from_sim no)
+		(at 178.435 59.055 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "52aad9ce-c78b-4835-b72c-520c04795e98")
+	)
+	(text "NTC\n2k"
+		(exclude_from_sim no)
+		(at 178.435 97.155 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6f5b79f2-af39-49eb-8c5a-bc7c85d27f94")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 234.95 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a27626b5-afda-424b-abf6-f208385127a4")
+	)
+	(text "NTC\n2k"
+		(exclude_from_sim no)
+		(at 178.435 135.255 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e67e632a-bc10-4501-99e4-3971a4969189")
+	)
+	(text_box "Resistance range:\n2480 to 435 Ω\n(20 to 70 °C)\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(2480 * 435) ≈ 1 kΩ\n\nOutput range:\n0.237 V to 1.867 V"
+		(exclude_from_sim no)
+		(at 22.86 134.62 0)
+		(size 31.75 22.86)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0a7650bf-429d-4e5a-8666-2fdbf51a4d27")
+	)
+	(text_box "Sensor: Bosch 0 261 230 340\nOEM ID: SH01-18-541\nRange: -40 °C to 140 °C\n\nhttps://www.efisolutions.com.au/bosch-fluid-pressure-and-temperature-sensor-pst-f1"
+		(exclude_from_sim no)
+		(at 22.86 115.57 0)
+		(size 90.17 11.43)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "4debf5e8-823f-416f-b3ed-5d3131ca45f4")
 	)
 	(junction
 		(at 195.58 52.07)
@@ -7394,116 +7519,29 @@
 			"AEASAOEOAAAAAABAEgDhDgAAAAAAQBIA4Q4AAAAAAEASAOEOAAAAAABAEgDhDgAAAAAAQBIA4Q4A"
 			"AAAAAEASAOEOAAAAAABAEgDhDgAAAAAAQBIA4Q4AAAAAAEASAOEOAAAAAABAEgDhDgAAAAAAQBIA"
 			"4Q4AAAAAAEASAOEOAAAAAABAEgDhDgAAAAAAQBIA4Q4AAAAAAEASAOEOAAAAAABAEgDhDgAAAAAA"
-			"QBLw/9uJrOufjjWHAAAAAElFTkSuQmCC"
+			"QBLw/9uJrOufjjWHAAAAAElFTkSuQmCCMQBwAFgAbABnAHcAdwA2AFEAbQBaAG4ATQBUAGwAZwBu"
+			"AEwARAB3ADgATQBwAFIAMgBzAG0AWQBGAEUAQQBpAHAATgBPAFAASQByAFMATgBJAHkAcQBqAFIA"
+			"YQBGAGUAVABaAEQAawBKAEQASwBEAEUAQQB6AGcAYQBWAGYAVgB5AEsAUwBKAHoAcAA5ACsANgAy"
+			"AHEANQBrAEMAUAB0AGgAeQBWAGcATwBUAEkAcwAvAGkAbgBUADMAdwB1AEoAVgBUAFoAcwBhAHgA"
+			"bQBMAE0AVABiADMAbgBiAEoAVwBlAGMAYwBTAGQAbABCAGoATQBXAFEASwBLADYAagBJAEUAbABM"
+			"AEMAVABRAG8AYQBHAG8ATgAyAEsAaABoAGEATgA2ADgANABrAFAAWAB2AEgAWABwAEUAawBiAEMA"
+			"cgBEAFIATABaAHAAWQBVAEUAUAB6AHcAQgArAHYAdgB1AEgAMgAxAFcAdAAwADcAUAA0ADUANwBM"
+			"AG4AbgA3AFoAbgB2ADMATAAwADEAVQBPADMANQBSAHQAZABCAFYAUQBHAEcAbQBKAFYAagA3AEYA"
+			"OQBLAHoAaQBsAEkAQgB0AFIAeABiAFoAbAA4AHIATgArACsAcQBqAHEAQwBFAGQAbABLADEAMgB0"
+			"ADQAVAB4AGMAWQAzAEgAUABoAGQAcwB0AC8AWgBDADMAcwBTAHIAWABlADEAbgBKAGkANwBtAGgA"
+			"UQBKAEgAdQArACsAcwA2AFAAcQBMAGEAUQBRAGgAYQBaAEEANgAvAHYAYgB2AC8AMwBzADgARABC"
+			"AEsAaABTAFAARgBRAGcATQAxAEIAaQB4AGIASwBuAC8ALwBzAFgAZQBjAGQAOQA3AHgATQBXAHcA"
+			"VAAyAFMANwBZAEwAaAB5AEcARABSAE8AagBRAFUAYgBOAGQAZwBSAHUAQgA3AGMAVgBjAGYAcwBM"
+			"AEwAagByAHAAQQB4ADkAOAAzAGYAUgBwAEkARQBHAHgAVgB0AGsAUwBnAFIARgBsAGkAUQBkAFgA"
+			"bABWAC8AKwA4AHIAZgBCAEsAYQBxAGkAbwBQAE0AcABxAHcAYgBwADcAYgBQAFYAYgB0ACsAOQBN"
+			"AHYARgBrAFYAcABlAEMAVABmAHMARwBTAEcALwA2AGMAcwBKAGQAYQBvAGMAdQBPADEAbABxAEsA"
+			"dwBwAEgARAArAHEAVABzAFIALwBtADkAKwAxADUAcwArAE4AeAB6AGsAUgBLADIAZABmADAAZABB"
+			"AFMASQBwAFUAdAByAGYALwBmAFIAZAB4ADUANQA1AEoASQBnAFcAOABGAHQASQBqAHMAQwBSAHMA"
+			"MQBHAFkAQwBQAEMARQBjAG8AUQBiAA=="
 		)
-	)
-	(text_box "Resistance range:\n2480 to 435 Ω\n(20 to 70 °C)\n\nOptimum value of the upper resistor in the divider:\nR = sqrt(2480 * 435) ≈ 1 kΩ\n\nOutput range:\n0.237 V to 1.867 V"
-		(exclude_from_sim no)
-		(at 22.86 134.62 0)
-		(size 31.75 22.86)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "0a7650bf-429d-4e5a-8666-2fdbf51a4d27")
-	)
-	(text_box "Sensor: Bosch 0 261 230 340\nOEM ID: SH01-18-541\nRange: -40 °C to 140 °C\n\nhttps://www.efisolutions.com.au/bosch-fluid-pressure-and-temperature-sensor-pst-f1"
-		(exclude_from_sim no)
-		(at 22.86 115.57 0)
-		(size 90.17 11.43)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "4debf5e8-823f-416f-b3ed-5d3131ca45f4")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 234.95 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "19cfd43c-62da-4295-8404-35c0958823f7")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 234.95 146.05 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1d7dbcff-d88b-460d-83dd-d2ffdd80f987")
-	)
-	(text "NTC\n2k"
-		(exclude_from_sim no)
-		(at 178.435 59.055 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "52aad9ce-c78b-4835-b72c-520c04795e98")
-	)
-	(text "NTC\n2k"
-		(exclude_from_sim no)
-		(at 178.435 97.155 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6f5b79f2-af39-49eb-8c5a-bc7c85d27f94")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 234.95 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a27626b5-afda-424b-abf6-f208385127a4")
-	)
-	(text "NTC\n2k"
-		(exclude_from_sim no)
-		(at 178.435 135.255 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e67e632a-bc10-4501-99e4-3971a4969189")
 	)
 	(label "N3"
 		(at 218.44 132.08 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7514,7 +7552,6 @@
 	)
 	(label "N3"
 		(at 185.42 128.27 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7525,7 +7562,6 @@
 	)
 	(label "N2"
 		(at 185.42 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7536,7 +7572,6 @@
 	)
 	(label "P2"
 		(at 190.5 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7547,7 +7582,6 @@
 	)
 	(label "N2"
 		(at 218.44 93.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7558,7 +7592,6 @@
 	)
 	(label "N1"
 		(at 218.44 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7569,7 +7602,6 @@
 	)
 	(label "N1"
 		(at 185.42 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7580,7 +7612,6 @@
 	)
 	(label "P1"
 		(at 218.44 49.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7591,7 +7622,6 @@
 	)
 	(label "P3"
 		(at 190.5 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7602,7 +7632,6 @@
 	)
 	(label "P2"
 		(at 218.44 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7613,7 +7642,6 @@
 	)
 	(label "P3"
 		(at 218.44 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7624,7 +7652,6 @@
 	)
 	(label "P1"
 		(at 190.5 52.07 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7636,7 +7663,6 @@
 	(hierarchical_label "OUT3"
 		(shape output)
 		(at 252.73 125.73 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7648,7 +7674,6 @@
 	(hierarchical_label "IN3"
 		(shape input)
 		(at 173.99 128.27 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7660,7 +7685,6 @@
 	(hierarchical_label "OUT1"
 		(shape output)
 		(at 252.73 49.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7672,7 +7696,6 @@
 	(hierarchical_label "IN2"
 		(shape input)
 		(at 173.99 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7684,7 +7707,6 @@
 	(hierarchical_label "OUT2"
 		(shape output)
 		(at 252.73 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7696,7 +7718,6 @@
 	(hierarchical_label "IN1"
 		(shape input)
 		(at 173.99 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7714,7 +7735,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "02bbf070-5fdb-4c60-a06c-3653c867bc5b")
-		(property "Reference" "R?"
+		(property "Reference" "R100"
 			(at 197.358 120.7516 0)
 			(effects
 				(font
@@ -7819,7 +7840,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "02e39ae3-ae8c-4d67-8949-2a5e3d187ff9")
-		(property "Reference" "R?"
+		(property "Reference" "R95"
 			(at 178.562 120.7516 0)
 			(effects
 				(font
@@ -8124,7 +8145,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3e416952-3456-40ba-969b-5b4b10b1cd6a")
-		(property "Reference" "R?"
+		(property "Reference" "R94"
 			(at 178.562 82.6516 0)
 			(effects
 				(font
@@ -8228,7 +8249,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "41ff6986-44fc-4774-9300-595816393653")
-		(property "Reference" "R?"
+		(property "Reference" "R98"
 			(at 197.358 82.6516 0)
 			(effects
 				(font
@@ -8332,7 +8353,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4774538c-dfa6-4bf2-94b4-0a03c01ae7e1")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0192"
 			(at 187.96 68.58 0)
 			(effects
 				(font
@@ -8423,7 +8444,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d8d005f-f285-41b7-a466-20a10b8cdd0f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0196"
 			(at 187.96 144.78 0)
 			(effects
 				(font
@@ -8579,7 +8600,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "650cc9cb-0cbc-4b32-af77-3e5785ef7041")
-		(property "Reference" "R?"
+		(property "Reference" "R97"
 			(at 197.358 54.7116 0)
 			(effects
 				(font
@@ -8683,7 +8704,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "76d47126-1122-40b6-b232-766d3f7beb74")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0194"
 			(at 187.96 106.68 0)
 			(effects
 				(font
@@ -8923,7 +8944,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a384a5e7-6158-4d0e-aef9-970b522884c9")
-		(property "Reference" "R?"
+		(property "Reference" "R96"
 			(at 197.358 44.5516 0)
 			(effects
 				(font
@@ -9171,7 +9192,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c4f67a45-8c77-4486-b84d-1c1ab15591fe")
-		(property "Reference" "R?"
+		(property "Reference" "R101"
 			(at 197.358 130.9116 0)
 			(effects
 				(font
@@ -9424,7 +9445,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d8aea7dc-1a2e-4548-8801-980b6247b031")
-		(property "Reference" "R?"
+		(property "Reference" "R99"
 			(at 197.358 92.8116 0)
 			(effects
 				(font
@@ -9529,7 +9550,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "df1d6f89-e623-4494-a999-322ffbb9fbdc")
-		(property "Reference" "R?"
+		(property "Reference" "R93"
 			(at 178.562 44.5516 0)
 			(effects
 				(font
@@ -9757,6 +9778,10 @@
 	(sheet
 		(at 227.33 121.92)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -9786,33 +9811,33 @@
 		)
 		(pin "+" input
 			(at 227.33 125.73 180)
+			(uuid "5953bf0d-295a-43eb-90a2-04d601a00e89")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "5953bf0d-295a-43eb-90a2-04d601a00e89")
 		)
 		(pin "OUT" output
 			(at 251.46 125.73 0)
+			(uuid "1ebaba69-95eb-4b80-848f-f86953814918")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1ebaba69-95eb-4b80-848f-f86953814918")
 		)
 		(pin "-" input
 			(at 227.33 132.08 180)
+			(uuid "11eb1763-4a0b-4d94-8ee1-978bb9c8f968")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "11eb1763-4a0b-4d94-8ee1-978bb9c8f968")
 		)
 		(instances
 			(project "rearbox"
@@ -9825,6 +9850,10 @@
 	(sheet
 		(at 227.33 45.72)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -9854,33 +9883,33 @@
 		)
 		(pin "+" input
 			(at 227.33 49.53 180)
+			(uuid "f0c437ce-3862-4d25-bdc4-3ab3ea063aaa")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f0c437ce-3862-4d25-bdc4-3ab3ea063aaa")
 		)
 		(pin "OUT" output
 			(at 251.46 49.53 0)
+			(uuid "83586933-42af-409b-b1a3-0f39bcbcc43c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "83586933-42af-409b-b1a3-0f39bcbcc43c")
 		)
 		(pin "-" input
 			(at 227.33 55.88 180)
+			(uuid "3918105e-d46a-43d4-bfdf-abb7526b2584")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3918105e-d46a-43d4-bfdf-abb7526b2584")
 		)
 		(instances
 			(project "rearbox"
@@ -9893,6 +9922,10 @@
 	(sheet
 		(at 227.33 83.82)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -9922,33 +9955,33 @@
 		)
 		(pin "+" input
 			(at 227.33 87.63 180)
+			(uuid "5498beec-d4d3-44af-a3c5-7e2ce56bb7b7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "5498beec-d4d3-44af-a3c5-7e2ce56bb7b7")
 		)
 		(pin "OUT" output
 			(at 251.46 87.63 0)
+			(uuid "819b4633-69f3-47f4-a33c-519878f998a6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "819b4633-69f3-47f4-a33c-519878f998a6")
 		)
 		(pin "-" input
 			(at 227.33 93.98 180)
+			(uuid "2efb80d1-d234-4a12-b53e-abd01d847568")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "2efb80d1-d234-4a12-b53e-abd01d847568")
 		)
 		(instances
 			(project "rearbox"

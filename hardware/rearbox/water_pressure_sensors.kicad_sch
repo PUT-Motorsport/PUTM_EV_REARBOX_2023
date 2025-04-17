@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7794878f-0ef3-46d5-a3b2-c714cd7773de")
 	(paper "A4")
 	(title_block
@@ -13,9 +13,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -85,10 +89,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -97,10 +101,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -146,11 +150,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D_TVS"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -218,10 +227,10 @@
 			(symbol "D_TVS_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -242,10 +251,10 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -291,11 +300,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -413,6 +427,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3VA"
 			(power)
@@ -490,7 +505,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -502,7 +517,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -516,7 +531,8 @@
 			(symbol "+3.3VA_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3.3VA"
 						(effects
 							(font
@@ -533,6 +549,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -612,7 +629,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -629,7 +647,94 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "0.5 V"
+		(exclude_from_sim no)
+		(at 165.1 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "13167428-32bf-4bec-b7e2-d3bdf44292b0")
+	)
+	(text "0.5 V"
+		(exclude_from_sim no)
+		(at 165.1 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "243abc16-75f9-4a65-af61-65ad4e279661")
+	)
+	(text "0.5 to 1.3 V"
+		(exclude_from_sim no)
+		(at 171.45 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "565a9892-fd6d-4a83-a1ca-42c1999fda1f")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 207.01 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b36120e-249e-4e62-ad64-dee2e9d895d2")
+	)
+	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
+		(exclude_from_sim no)
+		(at 207.01 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a5ca0874-8aa9-4af4-9a03-ed4e1bd6a12a")
+	)
+	(text "0.5 to 1.3 V"
+		(exclude_from_sim no)
+		(at 171.45 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b35643f9-943f-4abe-a09a-598ac151d190")
+	)
+	(text_box "Sensor: Bosch 0 261 230 340\nOEM ID: SH01-18-541\nRange: 0 to 1000 kPa\n\nhttps://www.efisolutions.com.au/bosch-fluid-pressure-and-temperature-sensor-pst-f1\n\nExpected range: 0 to 200 kPa"
+		(exclude_from_sim no)
+		(at 21.59 115.57 0)
+		(size 88.9 15.24)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "06cdd82e-082a-4ea6-bdfe-baed937157b1")
 	)
 	(junction
 		(at 185.42 129.54)
@@ -4388,98 +4493,30 @@
 			"AAAATIDiDgAAAEyA4g4AAABMgOIOAAAATIDiDgAAAEyA4g4AAABMgOIOAAAATIDiDgAAAEyA4g4A"
 			"AABMgOIOAAAATIDiDgAAAEyA4g4AAABMgOIOAAAATIDiDgAAAEyA4g4AAABMgOIOAAAATIDiDgAA"
 			"AEyA4g4AAABMgOIOAAAATIDiDgAAAEyA4g4AAABMgOIOAAAATIDiDgAAAEzgX51T7NJvUuP9AAAA"
-			"AElFTkSuQmCC"
+			"AElFTkSuQmCCAE0AcQAzAEIAVgBGAFUAUgBSAEYAaQBaAG8AbABEAEMARAAvAFEAdwBxAHkAagAx"
+			"AHMAYgBmAGMAcwBSADUAWABVAHAAegAzADEATAB2AHUAVwBQAGcAQgBOAHgARgAxADMATABKAFgA"
+			"aQBoAEUASAA4AFcAQwBUAGoAUQBhAHkARABHAGIAUwBKAFIAZgBLAGsAUAArAGQAYgBEAG0ASwBn"
+			"AC8ATwBvADUAdwBtAFgAaABLAFIARQBnAFEATQBuAFgAWgBZADkAagBBADAAeAB6AGYAQwArAGUA"
+			"VABjAFkAVgBtAEEAcQBIAFAAMQBhAHMALwByADkAUwBOADIAZgBPADQAaABIAGoAMABXAHgAWABT"
+			"AGUAdQA2AHcAZwBOAHUALwBjAHEAVgA4AGsANwBLAGIAOQArAFEARQBOAGQASQB5ADcAaABxADAA"
+			"VABiAGEALwBzAG4AdgBvAHkAcQBtAEsAbwBpAGkASwBvAHQAUQB0AGEALwAvADIAMgAyADkALwA5"
+			"ADkAMQAzAGkASABqAGMAQwBjAGUAUABHAEQARgBDAGgASwBtAEUAVgB4AEcAeAB0AHIAWgAyADMA"
+			"cgB4ADUAaQB4AFkAdABLAGkAOAB0AHkAOAB6AE0ASABEAHAAMAA2AEwAQgBoAHcAOQBDAEwAeQBU"
+			"ADEAUwA1AHgAaABCACsATwByAEwATAA3AC8ANAA2AHMAdQB0AFcANwBlAG0AcAA2AFkAZABkAHQA"
+			"aABoAHcANABjAFAAVAAwAGwASgBDAFkAVgBDAHYARgBRAG4AQwB6ADUAVwBnAFUAUwAwAGQAdQAz"
+			"AGEAagB6AC8AKwBlAE0ATwBHAEQAVQBsAEoAUwBUADEANwA5AHoAcgB0AHQATgBOAHkAYwAzAFAA"
+			"UgBzAFoAVwBMAFIAawBUAEUAegBaAHMAMwBmAC8AVABoADMARABWAHIAMQBoAEIAQwBYAGwANwBl"
+			"AHEAYQBlAGUAMgByADEANwBkADQAegAxAG8ARABmAEcAcQA2ACsAKwB1AG4AbgB6AFoAZwBCAEkA"
+			"VAAwADgAZgBQADMANAA4AEoASgB6AFAAdQBuAEQAaAB3AG8AOAArACsAaQBqAE8AagBZAE8ASQBv"
+			"AFYAQQBvAE4AVABVADEASwB5AHUAcgBiADkAKwArAFIAeAB3ACsAVQBPAHgARAAwAE0AcQBNAEkA"
+			"dQA2AHcAaQBkAFIALwArAC8AYgB0AHoAegB6AHoARABHAHYAMwBhADYANgA1AHAAbgBQAG4AegBo"
+			"AGgAcgBXADYAOABQAEUAYQAxAGEAdABXAHIAOQArAHYAWABTAFUASgBJADMAaABqADkANAAyAEcA"
+			"RwBIAGQAZQ=="
 		)
-	)
-	(text_box "Sensor: Bosch 0 261 230 340\nOEM ID: SH01-18-541\nRange: 0 to 1000 kPa\n\nhttps://www.efisolutions.com.au/bosch-fluid-pressure-and-temperature-sensor-pst-f1\n\nExpected range: 0 to 200 kPa"
-		(exclude_from_sim no)
-		(at 21.59 115.57 0)
-		(size 88.9 15.24)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "06cdd82e-082a-4ea6-bdfe-baed937157b1")
-	)
-	(text "0.5 V"
-		(exclude_from_sim no)
-		(at 165.1 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "13167428-32bf-4bec-b7e2-d3bdf44292b0")
-	)
-	(text "0.5 V"
-		(exclude_from_sim no)
-		(at 165.1 130.81 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "243abc16-75f9-4a65-af61-65ad4e279661")
-	)
-	(text "0.5 to 1.3 V"
-		(exclude_from_sim no)
-		(at 171.45 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "565a9892-fd6d-4a83-a1ca-42c1999fda1f")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 207.01 128.27 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8b36120e-249e-4e62-ad64-dee2e9d895d2")
-	)
-	(text "G = 2\nR_{F} = 4k7\nR_{G} = 4k7"
-		(exclude_from_sim no)
-		(at 207.01 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a5ca0874-8aa9-4af4-9a03-ed4e1bd6a12a")
-	)
-	(text "0.5 to 1.3 V"
-		(exclude_from_sim no)
-		(at 171.45 109.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b35643f9-943f-4abe-a09a-598ac151d190")
 	)
 	(hierarchical_label "IN2"
 		(shape input)
 		(at 180.34 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4491,7 +4528,6 @@
 	(hierarchical_label "OUT2"
 		(shape output)
 		(at 224.79 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4503,7 +4539,6 @@
 	(hierarchical_label "IN1"
 		(shape input)
 		(at 180.34 54.61 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4515,7 +4550,6 @@
 	(hierarchical_label "OUT1"
 		(shape output)
 		(at 224.79 54.61 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5709,6 +5743,10 @@
 	(sheet
 		(at 199.39 50.8)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -5738,33 +5776,33 @@
 		)
 		(pin "+" input
 			(at 199.39 54.61 180)
+			(uuid "ef0ba744-6c53-43db-91ff-20825b9f7146")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ef0ba744-6c53-43db-91ff-20825b9f7146")
 		)
 		(pin "OUT" output
 			(at 223.52 54.61 0)
+			(uuid "3e3b943d-04a3-4e17-93bc-3bb55ce6af50")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "3e3b943d-04a3-4e17-93bc-3bb55ce6af50")
 		)
 		(pin "-" input
 			(at 199.39 60.96 180)
+			(uuid "bb4723d0-1f5f-4e0d-aa74-62790f235e6b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "bb4723d0-1f5f-4e0d-aa74-62790f235e6b")
 		)
 		(instances
 			(project "rearbox"
@@ -5777,6 +5815,10 @@
 	(sheet
 		(at 199.39 104.14)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -5806,33 +5848,33 @@
 		)
 		(pin "+" input
 			(at 199.39 107.95 180)
+			(uuid "3f340953-5ed3-4668-873f-32156ff4efaa")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3f340953-5ed3-4668-873f-32156ff4efaa")
 		)
 		(pin "OUT" output
 			(at 223.52 107.95 0)
+			(uuid "c04a5b8c-1ae2-4aba-8f99-52f2476d9c3b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "c04a5b8c-1ae2-4aba-8f99-52f2476d9c3b")
 		)
 		(pin "-" input
 			(at 199.39 114.3 180)
+			(uuid "3bce081b-88a9-4053-9c34-8f4d371b74cb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3bce081b-88a9-4053-9c34-8f4d371b74cb")
 		)
 		(instances
 			(project "rearbox"
