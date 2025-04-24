@@ -1707,7 +1707,7 @@
 			(uuid "56222a7c-6311-44d1-b8c4-7888b14356df")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -3847,7 +3847,7 @@
 			(uuid "eba35c45-220c-4678-b9f2-a729ad20e853")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -3999,7 +3999,7 @@
 			(uuid "44c62fed-0db0-49ae-b794-89480c95151f")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -4303,7 +4303,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C14"
-			(at -2.65 -1.03 0)
+			(at -2 -0.65 270)
 			(layer "F.SilkS")
 			(uuid "74817823-945c-464e-80d3-dfcebf52ca6b")
 			(effects
@@ -4319,7 +4319,7 @@
 			(uuid "75199ade-7e7a-41f2-941d-08918e529474")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -4550,7 +4550,7 @@
 			(uuid "9f0d2aad-2057-4bde-9019-c5875582db1e")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -4804,7 +4804,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C27"
-			(at 2.5 0 0)
+			(at -2.14 0.649999 0)
 			(layer "F.SilkS")
 			(uuid "dce26042-e201-4574-985b-afa21d949438")
 			(effects
@@ -7487,8 +7487,8 @@
 			(uuid "60def5bc-a4af-405c-8312-54b904cf9fdc")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -7499,8 +7499,8 @@
 			(uuid "e191b9e7-b558-43c3-a340-f10aef7bc523")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -7714,8 +7714,8 @@
 			(uuid "9d4767ff-fd25-4cf1-a1d8-c7611e8fb72d")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -7773,7 +7773,7 @@
 			(uuid "26ce8a4d-2473-4982-800b-2321ea4ab0f0")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -7913,7 +7913,7 @@
 			(uuid "138bc1a5-2889-4386-a3c4-65fe22505638")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -12526,8 +12526,8 @@
 			(uuid "d4cbc0d7-9867-4429-9d35-142ee41742d0")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -12537,8 +12537,8 @@
 			(uuid "12e942c3-417d-4c85-97bd-f39e56e29e59")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -12692,8 +12692,8 @@
 			(uuid "1dfccb99-5baf-4e04-be55-98fa9ee40063")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -13150,7 +13150,7 @@
 			(uuid "11f30122-4c1d-4f60-9044-759fea782da7")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -13290,7 +13290,7 @@
 			(uuid "38fd3661-30b4-42fc-9438-d43427bde2ee")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -14373,7 +14373,7 @@
 			(uuid "dd86bd46-a147-4890-8bac-d9629dfe7dcd")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -14513,7 +14513,7 @@
 			(uuid "e48f6215-a6d6-4653-9009-c87b42b9c104")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -14956,13 +14956,13 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C18"
-			(at 0 -1.68 90)
+			(at 2.25 0 180)
 			(layer "F.SilkS")
 			(uuid "6a5c7216-eb39-4cca-9140-db6f83f943f5")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -14972,8 +14972,8 @@
 			(uuid "46fab490-33b2-40d6-aaf5-e37217f82273")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -15205,8 +15205,8 @@
 			(uuid "c7facc3d-5187-4153-8cc2-823cbb29df67")
 			(effects
 				(font
-					(size 0.5 0.5)
-					(thickness 0.08)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -18931,13 +18931,13 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R136"
-			(at 0 -1.43 0)
+			(at 0.25 1.15 0)
 			(layer "F.SilkS")
 			(uuid "d42bc1a4-f1db-4c9f-850c-e3915e1827d9")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -18947,8 +18947,8 @@
 			(uuid "c97e30a5-3869-4cdf-9e1d-31bf4b876c9a")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -19180,8 +19180,8 @@
 			(uuid "39729897-e1e5-4507-ba03-505cd1f2c855")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -19637,7 +19637,7 @@
 			(uuid "e449a7c0-1559-4a66-aa17-dfd6738aeeef")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -19777,7 +19777,7 @@
 			(uuid "cddf6914-e6ca-4c35-b4a7-d8db2e271b01")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -25491,7 +25491,7 @@
 			(uuid "41c5b250-6886-44bc-a8a7-b0d8a79206b2")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -25643,7 +25643,7 @@
 			(uuid "cb38a048-983c-4290-bec2-e94f40651c9b")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -27849,7 +27849,7 @@
 			(uuid "34be26f8-2cde-4517-90fd-b7bde950de57")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -27989,7 +27989,7 @@
 			(uuid "1e5d12f8-c4d4-473c-a63b-440c3495a0ed")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -29152,7 +29152,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C17"
-			(at 1.32 -0.005 90)
+			(at -1.9 -1.3 90)
 			(layer "F.SilkS")
 			(uuid "74fcea78-a6e0-4635-836e-fc9520d107aa")
 			(effects
@@ -29169,7 +29169,7 @@
 			(uuid "789901b5-c3b9-48e9-8f09-3ca23a481eac")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -29400,7 +29400,7 @@
 			(uuid "fac74297-1517-43c9-88cc-9b36b55a4783")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -30309,8 +30309,8 @@
 			(uuid "a51d4d29-8078-4569-8955-8b4bed1d61e2")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -30320,8 +30320,8 @@
 			(uuid "ac6d4a5f-946d-4313-9628-676551907386")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -30553,8 +30553,8 @@
 			(uuid "eed0220c-b07e-4ae7-8e39-9580bbbbe061")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -32230,7 +32230,7 @@
 			(uuid "0605e493-bb10-4dcd-9e7b-4b20d4a8a597")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -32370,7 +32370,7 @@
 			(uuid "bb5b9c0c-886d-4fa1-b4af-ed0b2c4247d2")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -33688,7 +33688,7 @@
 		(descr "Fuse SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator")
 		(tags "fuse")
 		(property "Reference" "F1"
-			(at 3.6 1.5 0)
+			(at -3.815 0.015 0)
 			(layer "F.SilkS")
 			(uuid "8da38831-71bd-4d8c-bbc6-fd324575c6cc")
 			(effects
@@ -33856,7 +33856,7 @@
 			(uuid "264df636-f3d1-46e9-919c-cef146bb24cf")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -36522,7 +36522,7 @@
 			(uuid "36f5ec49-8dcb-465d-a556-591cac4437cc")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -36662,7 +36662,7 @@
 			(uuid "d3ad0e2d-db66-4941-a037-5c8cba8799c4")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -37702,13 +37702,13 @@
 		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "IC2"
-			(at 0 -2.4 0)
+			(at 0.18 -2.485 90)
 			(layer "F.SilkS")
 			(uuid "1d4249fc-6b0f-4b5d-bfc4-13025fd60fa8")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -37718,8 +37718,8 @@
 			(uuid "5758ef7d-0a4d-45a4-85e2-a63281ebc8ae")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -38003,8 +38003,8 @@
 			(uuid "d02f6292-f71e-4275-96fb-fb2447280aef")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -39164,8 +39164,8 @@
 			(uuid "e72031cc-a272-4d5c-ba83-a3ff7ca1ab6b")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -39175,8 +39175,8 @@
 			(uuid "8a0291a9-63e3-4275-accc-4443cd1b63eb")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -39408,8 +39408,8 @@
 			(uuid "dab3cd67-113b-4821-9c0b-4ae2e5c0ad61")
 			(effects
 				(font
-					(size 0.5 0.5)
-					(thickness 0.08)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -41071,7 +41071,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C12"
-			(at 0.05 -1.53 0)
+			(at 2 0.15 90)
 			(layer "F.SilkS")
 			(uuid "d6612287-b3bf-4c6d-beca-c0dcb6237813")
 			(effects
@@ -41087,7 +41087,7 @@
 			(uuid "0343ead1-2f74-47c9-821b-98b9c72371f2")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -41239,7 +41239,7 @@
 			(uuid "cf3a4213-1fb3-42a9-a7c2-c1185a583e42")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -41498,7 +41498,7 @@
 			(uuid "d64fee6d-8882-44dd-bf0e-d9d9055a96cc")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -41650,7 +41650,7 @@
 			(uuid "ebc7debc-e1d3-4d87-88cf-8ddc4dcc671e")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -41693,13 +41693,13 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C16"
-			(at 0 -1.43 0)
+			(at 2.05 -0.085 90)
 			(layer "F.SilkS")
 			(uuid "e44e2fe2-79f8-4162-855d-94efd50072b8")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -41709,8 +41709,8 @@
 			(uuid "1f9fd8cd-a073-45f2-8c88-8e81251978ee")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -41942,8 +41942,8 @@
 			(uuid "5d9b622d-eeeb-4109-aff9-691734e358f4")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -42468,7 +42468,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C11"
-			(at 0 1.42 0)
+			(at 2.205 0.215 90)
 			(layer "F.SilkS")
 			(uuid "a75c00b2-c5aa-401a-94cb-5593c2805d6e")
 			(effects
@@ -42484,7 +42484,7 @@
 			(uuid "19e93910-64ec-45ab-876f-b4edc4064af6")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -42636,7 +42636,7 @@
 			(uuid "b4121e86-78dc-4b68-84ca-775854c1c27f")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -44897,7 +44897,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R7"
-			(at -2 -0.18 90)
+			(at -0.04 -1.149999 180)
 			(layer "F.SilkS")
 			(uuid "144956bf-3e81-4a80-b74f-16c294afaa71")
 			(effects
@@ -45917,8 +45917,8 @@
 			(uuid "6e88ce8a-ec0e-4214-97c9-bcb694b1fe1a")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -46377,8 +46377,8 @@
 			(uuid "298009ce-b17d-4860-a5c0-84ae636a1959")
 			(effects
 				(font
-					(size 0.9 0.9)
-					(thickness 0.135)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -51198,7 +51198,7 @@
 			(uuid "7dd18710-6801-4698-ab84-4716ab7a0f1e")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -51338,7 +51338,7 @@
 			(uuid "d36836bb-76fe-471a-9601-30132be32ae6")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -51966,7 +51966,7 @@
 			(uuid "7fbe0863-1eed-4470-bf02-704418e5ae26")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -52420,13 +52420,13 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R137"
-			(at 0 -1.43 90)
+			(at -2.525 0.15 270)
 			(layer "F.SilkS")
 			(uuid "271f1988-4629-4a00-ae36-26f8cde4f7b7")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -52436,8 +52436,8 @@
 			(uuid "69a21f64-50c6-4670-ab1a-baf281cb1bb6")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -52669,8 +52669,8 @@
 			(uuid "6173ada2-0ce0-41bc-9c27-add0bdcf25e9")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -53585,13 +53585,14 @@
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D24"
-			(at 0 -1.85 0)
+			(at -2.25 -0.25 90)
 			(layer "F.SilkS")
 			(uuid "0f5ff5e6-d61e-4288-a330-3be78365e167")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
+					(bold yes)
 				)
 			)
 		)
@@ -53601,8 +53602,8 @@
 			(uuid "b23dcd4a-fa7d-4ea9-9f82-4d86ad9b8e61")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -56873,7 +56874,7 @@
 			(uuid "b1204bd0-e6aa-4cb6-b1d8-a9c1f6589480")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -57013,7 +57014,7 @@
 			(uuid "7f2ce15e-d20a-4120-83ad-70ef18d565df")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -57867,7 +57868,7 @@
 		(descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U4"
-			(at -0.65 -2.3 90)
+			(at 0.885 -2.195 90)
 			(layer "F.SilkS")
 			(uuid "3f2c583e-2f9c-424c-8e32-352e069ed49e")
 			(effects
@@ -57883,7 +57884,7 @@
 			(uuid "54a716b2-1613-4275-8c97-be1711f16503")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -58053,7 +58054,7 @@
 			(uuid "e466186d-1d0d-483c-b233-4705d4346c3e")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -58933,13 +58934,13 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R135"
-			(at 0 -1.43 0)
+			(at 2.25 -0.835 0)
 			(layer "F.SilkS")
 			(uuid "c4bca99c-fe90-4be0-8fc0-ae315512ea0a")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -58949,8 +58950,8 @@
 			(uuid "b8b171bc-3776-4bd9-bfb5-fa5cac690dc7")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -59182,8 +59183,8 @@
 			(uuid "96a99deb-7161-4b9e-8e62-c7d6fa444178")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -59941,7 +59942,7 @@
 			(uuid "2692ab44-6372-46fb-8c7d-4ea213058af6")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -60081,7 +60082,7 @@
 			(uuid "97631a3c-d14f-4304-a320-70578341e658")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -60922,7 +60923,7 @@
 		(descr "Inductor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "inductor")
 		(property "Reference" "FB2"
-			(at -2.5 0 0)
+			(at 1.64 0.920001 0)
 			(layer "F.SilkS")
 			(uuid "433493b1-bd8e-4cb3-941e-f52b69e1de97")
 			(effects
@@ -61637,7 +61638,7 @@
 			(uuid "32627fc4-51ac-4916-a610-e4f2eb9d80f3")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -61777,7 +61778,7 @@
 			(uuid "dc70c1a2-9578-4023-b947-7097384fe16d")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -61820,7 +61821,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C26"
-			(at 2.5 0 0)
+			(at 1.48 0 90)
 			(layer "F.SilkS")
 			(uuid "9e447b0a-32e2-4f61-a835-97f5b719ba6f")
 			(effects
@@ -62019,13 +62020,13 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C20"
-			(at 0 -1.68 90)
+			(at 2.25 0.25 180)
 			(layer "F.SilkS")
 			(uuid "3e94078a-bb70-4e5c-837f-ff9b99c43b54")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -62035,8 +62036,8 @@
 			(uuid "e6133c08-eea7-4263-b67b-0ac2ea5af05f")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -62268,8 +62269,8 @@
 			(uuid "f9a139ad-da9a-4b51-934b-0bda89c8b313")
 			(effects
 				(font
-					(size 0.5 0.5)
-					(thickness 0.08)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
@@ -62311,7 +62312,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C10"
-			(at 2.15 0.62 90)
+			(at 2.205 0.175 90)
 			(layer "F.SilkS")
 			(uuid "d65021c7-374c-437d-906e-8e4de1a9b37d")
 			(effects
@@ -62327,7 +62328,7 @@
 			(uuid "72be122e-74fc-44e4-a02e-3877cba026ce")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -62479,7 +62480,7 @@
 			(uuid "e78e822d-3f8f-42ff-9917-96b1f638c447")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -63956,7 +63957,7 @@
 		(descr "Inductor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "inductor")
 		(property "Reference" "FB3"
-			(at -2.5 0 0)
+			(at -0.11 -1.189999 0)
 			(layer "F.SilkS")
 			(uuid "db1cc3fb-bb17-4594-a3d9-3fb4ecebfbfa")
 			(effects
@@ -66084,7 +66085,7 @@
 			(uuid "a729a6df-2ffb-4255-bea2-1a600ae4ec26")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -66224,7 +66225,7 @@
 			(uuid "64d4e600-152f-4267-9472-d02013c3976a")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -66749,7 +66750,7 @@
 		(descr "smd shielded power inductor 4x4x3mm, Abracon ASPI-4030S, https://abracon.com/Magnetics/power/ASPI-4030S.pdf")
 		(tags "inductor abracon smd shielded")
 		(property "Reference" "L2"
-			(at 0 -3 90)
+			(at -2.015 -3.505 180)
 			(layer "F.SilkS")
 			(uuid "cde8f224-df3c-4966-a2ca-1c6b75673989")
 			(effects
@@ -66765,7 +66766,7 @@
 			(uuid "3d45945d-febe-4bd4-a582-7d39dd6731f8")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -66905,7 +66906,7 @@
 			(uuid "4158b451-0920-483b-99fd-148f2fdabbe8")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -73822,7 +73823,7 @@
 			(uuid "d89e5f0a-80bc-4f5e-8355-cac86d0a7987")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -73962,7 +73963,7 @@
 			(uuid "c3f93117-5afe-4c0a-997b-b9353c0da9da")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 			)
@@ -74935,7 +74936,7 @@
 			(uuid "1f34108b-bbbc-41e5-873a-2a675d03e20c")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -74947,8 +74948,8 @@
 			(uuid "f4b795d5-79e6-4c73-bc68-8eb0fd7c6caf")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -75010,8 +75011,8 @@
 			(uuid "48f72066-5ace-420f-97b8-78f84c58176a")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -75143,7 +75144,7 @@
 			(uuid "2723293c-2950-4625-a108-78e40ee28563")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -75155,8 +75156,8 @@
 			(uuid "a7edccc4-021a-40e7-9993-f5687bd8baa1")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -75218,8 +75219,8 @@
 			(uuid "4e06d8a8-e0e2-4c9e-899a-b9582fa82483")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -76807,7 +76808,7 @@
 			(uuid "4aa91900-7f26-4a8c-94b8-4943ebe188ec")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -76911,7 +76912,7 @@
 			(uuid "06bcefbe-dc9a-4499-8fc6-036dfc7b0463")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -76986,8 +76987,8 @@
 			(uuid "22d1a264-b884-4968-94aa-d84d2ac46baa")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -77119,7 +77120,7 @@
 			(uuid "090da4ee-e4ef-42eb-a9f7-522224e85bbb")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -77223,7 +77224,7 @@
 			(uuid "be797029-6a3c-4932-9fb5-71977ed8eea0")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -77298,8 +77299,8 @@
 			(uuid "59f5782c-6961-451b-becd-27a9f8bb2ab6")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -78263,7 +78264,7 @@
 			(uuid "3707cab3-f269-4df7-8c95-7880b7bc07cf")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -78679,7 +78680,7 @@
 			(uuid "354750e2-f765-493f-86b6-63d1e7b4bb11")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.6 0.6)
 					(thickness 0.1)
 				)
 				(justify mirror)
@@ -78691,8 +78692,8 @@
 			(uuid "6e9e02e4-1795-4b9d-b359-20db354b825e")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -78754,8 +78755,8 @@
 			(uuid "ca9339b3-1531-41f4-81c2-4d21ae118392")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 				(justify mirror)
 			)
@@ -81893,7 +81894,7 @@
 		(uuid "66eae083-e92f-4162-8c08-d2deb292a531")
 		(effects
 			(font
-				(size 0.7 0.7)
+				(size 0.6 0.6)
 				(thickness 0.1)
 			)
 			(justify right)
@@ -81917,7 +81918,7 @@
 		(uuid "8c4e0250-b7b9-478b-be3e-9bf21e0451c4")
 		(effects
 			(font
-				(size 0.7 0.7)
+				(size 0.6 0.6)
 				(thickness 0.1)
 			)
 			(justify right)
@@ -81929,7 +81930,7 @@
 		(uuid "b8f3d8e5-7632-4ba8-8de4-b9de7a8dbecb")
 		(effects
 			(font
-				(size 0.7 0.7)
+				(size 0.6 0.6)
 				(thickness 0.1)
 			)
 			(justify right)
@@ -132543,7 +132544,7 @@
 				(xy 183.075 80.27505) (xy 183.075 80.6) (xy 182.727661 80.6) (xy 182.622339 80.6) (xy 182.520606 80.627259)
 				(xy 182.429394 80.67992) (xy 182.35492 80.754394) (xy 182.302259 80.845606) (xy 182.275 80.947339)
 				(xy 182.275 81.052661) (xy 182.302259 81.154394) (xy 182.35492 81.245606) (xy 182.429394 81.32008)
-				(xy 182.520606 81.372741) (xy 182.622339 81.4) (xy 182.125348 81.4) (xy 182.084236 81.387529) (xy 182.033495 81.353625)
+				(xy 182.520606 81.372741) (xy 182.622339 81.4) (xy 182.125348 81.4) (xy 182.084236 81.387529) (xy 182.075982 81.382014)
 				(xy 182.005495 81.334916) (xy 182.005493 81.334915) (xy 182.00549 81.334913) (xy 181.868917 81.278343)
 				(xy 181.868907 81.27834) (xy 181.771811 81.259026) (xy 181.723918 81.2495) (xy 181.576082 81.2495)
 				(xy 181.534977 81.257676) (xy 181.431092 81.27834) (xy 181.431082 81.278343) (xy 181.294509 81.334913)
@@ -132660,7 +132661,7 @@
 				(xy 165.893 81.384699) (xy 166.727373 81.384699) (xy 166.779699 81.406373) (xy 166.801017 81.451446)
 				(xy 166.804213 81.483898) (xy 166.804214 81.483903) (xy 166.809843 81.512209) (xy 166.809847 81.512225)
 				(xy 166.838611 81.607042) (xy 166.850533 81.635827) (xy 166.850538 81.635837) (xy 166.873886 81.68464)
-				(xy 166.873887 81.684642) (xy 166.873888 81.684643) (xy 166.908667 81.731105) (xy 166.960108 81.799825)
+				(xy 166.873887 81.684642) (xy 166.873888 81.684643) (xy 166.898962 81.718139) (xy 166.960108 81.799825)
 				(xy 167.000155 81.839874) (xy 167.000164 81.839882) (xy 167.000165 81.839883) (xy 167.040419 81.876042)
 				(xy 167.04042 81.876042) (xy 167.040424 81.876046) (xy 167.134594 81.931919) (xy 167.160178 81.947099)
 				(xy 167.164163 81.949463) (xy 167.192958 81.96139) (xy 167.287779 81.990153) (xy 167.287791 81.990155)
@@ -132698,7 +132699,7 @@
 				(xy 164.943 83.257496) (xy 164.942999 83.257496) (xy 164.854954 83.302359) (xy 164.76536 83.391953)
 				(xy 164.707835 83.50485) (xy 164.707835 83.504851) (xy 164.693 83.598518) (xy 164.443499 83.598518)
 				(xy 164.443499 83.579999) (xy 164.443499 83.579992) (xy 164.432999 83.477203) (xy 164.377814 83.310666)
-				(xy 164.285712 83.161344) (xy 164.161656 83.037288) (xy 164.012334 82.945186) (xy 163.875945 82.899991)
+				(xy 164.285712 83.161344) (xy 164.161656 83.037288) (xy 164.012334 82.945186) (xy 163.899523 82.907804)
 				(xy 163.845798 82.890001) (xy 163.835092 82.888907) (xy 163.816478 82.887005) (xy 163.766627 82.860126)
 				(xy 163.75 82.813389) (xy 163.75 81.837085) (xy 163.771674 81.784759) (xy 163.779647 81.777849)
 				(xy 163.894746 81.691687) (xy 163.980996 81.576472) (xy 163.987862 81.558065) (xy 164.004514 81.513416)
