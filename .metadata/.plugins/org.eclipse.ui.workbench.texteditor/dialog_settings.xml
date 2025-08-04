@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="brake"/>
+		<list key="findhistory">
+			<item value="brake"/>
+			<item value="NOMINAL_RESISTANCE"/>
+			<item value="IRQ_Handler"/>
+			<item value="data.fuse_led"/>
+			<item value="fuse_led "/>
+			<item value="fuse"/>
+			<item value="TCA6416A_WritePin"/>
+			<item value="temp"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+</section>

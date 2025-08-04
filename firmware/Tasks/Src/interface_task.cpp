@@ -41,16 +41,16 @@ void Interface_Task(void* argument) {
     for(;;) {
         if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
             // Analog inputs
-            temperature.mono = AIN_GetTemperature(&hain_mono_temperature);
+          //  temperature.mono = AIN_GetTemperature(&hain_mono_temperature);
             temperature.coolant_in = AIN_GetTemperature(&hain_coolant_temperature_in);
             temperature.coolant_out = AIN_GetTemperature(&hain_coolant_temperature_out);
-            temperature.oil_l = AIN_GetTemperature(&hain_oil_temperature_l);
-            temperature.oil_r = AIN_GetTemperature(&hain_oil_temperature_r);
+           // temperature.oil_l = AIN_GetTemperature(&hain_oil_temperature_l);
+            //temperature.oil_r = AIN_GetTemperature(&hain_oil_temperature_r);
 
-            data.coolant_pressure_in = AIN_GetPressure(&hain_coolant_pressure_in);
-            data.coolant_pressure_out = AIN_GetPressure(&hain_coolant_pressure_out);
-            data.suspension_l = AIN_GetResistance(&hain_suspension_potentiometer_l);
-            data.suspension_r = AIN_GetResistance(&hain_suspension_potentiometer_r);
+          //  data.coolant_pressure_in = AIN_GetPressure(&hain_coolant_pressure_in);
+           // data.coolant_pressure_out = AIN_GetPressure(&hain_coolant_pressure_out);
+            //data.suspension_l = AIN_GetResistance(&hain_suspension_potentiometer_l);
+            //data.suspension_r = AIN_GetResistance(&hain_suspension_potentiometer_r);
 
             // LEDs
             data.safety_led = safety.tripped;
@@ -74,10 +74,10 @@ void Interface_Task(void* argument) {
             }
 
             // Brake Light
-            if(data.brake_light) {
-                HAL_GPIO_WritePin(BRAKE_LIGHT_GPIO_Port, BRAKE_LIGHT_Pin, GPIO_PIN_SET);
+            if(data.brake_light) { //30.07.2025 currently using ASSI B as brake light
+                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_SET);
             } else {
-                HAL_GPIO_WritePin(BRAKE_LIGHT_GPIO_Port, BRAKE_LIGHT_Pin, GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_RESET);
             }
 
             // RTD

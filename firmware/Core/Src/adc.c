@@ -79,7 +79,7 @@ void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_8;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_12CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -258,12 +258,12 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     PA2     ------> ADC1_IN3
     PB0     ------> ADC1_IN15
     */
-    GPIO_InitStruct.Pin = MONO_TEMPERATURE_Pin|WATER_TEMPERATURE1_Pin;
+    GPIO_InitStruct.Pin = MONO_TEMPERATURE_Pin|WATER_PRESSURE1_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = WATER_TEMPERATURE2_Pin|WATER_PRESSURE1_Pin|WATER_PRESSURE2_Pin;
+    GPIO_InitStruct.Pin = WATER_PRESSURE2_Pin|WATER_TEMPERATURE1_Pin|WATER_TEMPERATURE2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -380,9 +380,9 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     PA2     ------> ADC1_IN3
     PB0     ------> ADC1_IN15
     */
-    HAL_GPIO_DeInit(GPIOC, MONO_TEMPERATURE_Pin|WATER_TEMPERATURE1_Pin);
+    HAL_GPIO_DeInit(GPIOC, MONO_TEMPERATURE_Pin|WATER_PRESSURE1_Pin);
 
-    HAL_GPIO_DeInit(GPIOA, WATER_TEMPERATURE2_Pin|WATER_PRESSURE1_Pin|WATER_PRESSURE2_Pin);
+    HAL_GPIO_DeInit(GPIOA, WATER_PRESSURE2_Pin|WATER_TEMPERATURE1_Pin|WATER_TEMPERATURE2_Pin);
 
     HAL_GPIO_DeInit(SENSE_OUT_GPIO_Port, SENSE_OUT_Pin);
 

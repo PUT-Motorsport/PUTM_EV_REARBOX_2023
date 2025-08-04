@@ -34,12 +34,12 @@ extern osMutexId_t safetyMutexHandle;
 void Safety_Task(void* argument) {
     for(;;) {
         if(osMutexAcquire(safetyMutexHandle, osWaitForever) == osOK) {
-            safety.rfu1 = TCA6416A_ReadPin(&htca, PIN_RFU1);
-            safety.rfu2 = TCA6416A_ReadPin(&htca, PIN_RFU2);
-            safety.asms = TCA6416A_ReadPin(&htca, PIN_ASMS);
-            safety.fw = TCA6416A_ReadPin(&htca, PIN_FW);
-            safety.hv = TCA6416A_ReadPin(&htca, PIN_HV);
-            safety.res = TCA6416A_ReadPin(&htca, PIN_RES);
+            safety.rfu1 = TCA6416A_ReadPin(&htca, PIN_RFU1);//sdc__sus_rl
+            safety.rfu2 = TCA6416A_ReadPin(&htca, PIN_RFU2);//sdc_sus_rr
+            safety.asms = TCA6416A_ReadPin(&htca, PIN_ASMS);//TSMP
+            safety.fw = TCA6416A_ReadPin(&htca, PIN_FW);//motor front
+            safety.hv = TCA6416A_ReadPin(&htca, PIN_HV);//TSAC
+            safety.res = TCA6416A_ReadPin(&htca, PIN_RES);//inv hv sense
             safety.hvd = TCA6416A_ReadPin(&htca, PIN_HVD);
             safety.inv = TCA6416A_ReadPin(&htca, PIN_INV);
             safety.wheel_fl = TCA6416A_ReadPin(&htca, PIN_WHEEL_FL);

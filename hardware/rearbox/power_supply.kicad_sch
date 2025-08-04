@@ -5829,7 +5829,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "22u"
 			(at 193.294 82.296 0)
 			(effects
 				(font
@@ -6536,7 +6536,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "22u"
 			(at 99.06 82.55 0)
 			(effects
 				(font
@@ -7292,7 +7292,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100n"
 			(at 158.75 67.0814 90)
 			(effects
 				(font
@@ -7934,7 +7934,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "22u"
 			(at 181.4068 82.423 0)
 			(effects
 				(font
@@ -8619,7 +8619,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ed993503-a01a-4e84-80af-4ad2d85f9776")
+		(uuid "ed993503-a01a-4e84-80af-4ad2d85f9777")
 		(property "Reference" "#PWR028"
 			(at 36.83 91.44 0)
 			(effects
@@ -8665,7 +8665,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5210b547-0c76-4627-b8e2-bb08d20b2b42")
+			(uuid "5210b547-0c76-4627-b8e2-bb08d20b2b43")
 		)
 		(instances
 			(project "rearbox"
@@ -8896,7 +8896,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100n"
 			(at 110.49 82.55 0)
 			(effects
 				(font

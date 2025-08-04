@@ -729,6 +729,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "30.07.2025\nCurrently ASSI B Q4 used as brake light transtor\nbo się spaliło :(\n"
+		(exclude_from_sim no)
+		(at 129.032 91.694 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6a1c17c3-b512-4d47-ba62-f78b5ff549e4")
+	)
 	(text "Brake Light"
 		(exclude_from_sim no)
 		(at 169.545 94.996 90)

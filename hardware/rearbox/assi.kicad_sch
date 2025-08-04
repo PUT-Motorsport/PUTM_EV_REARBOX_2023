@@ -795,6 +795,16 @@
 		)
 		(uuid "4549a407-3131-480a-a37f-23b2586bc0fb")
 	)
+	(text "30.07.2025\nCurrently used as brake light transtor\n"
+		(exclude_from_sim no)
+		(at 172.974 92.964 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5fa56fa3-7423-4e3a-aa00-f94622d9a527")
+	)
 	(text "Green Channel"
 		(exclude_from_sim no)
 		(at 135.255 97.536 90)

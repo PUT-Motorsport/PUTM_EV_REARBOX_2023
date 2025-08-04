@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;firmware/Components/PUTM_EV_CAN_LIBRARY/CMakeFiles&apos;" deleteContents="false" description="Delete resource &apos;firmware/Components/PUTM_EV_CAN_LIBRARY/CMakeFiles&apos;" element1="/firmware/Components/PUTM_EV_CAN_LIBRARY/CMakeFiles" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1746900449051"/>
+</session>

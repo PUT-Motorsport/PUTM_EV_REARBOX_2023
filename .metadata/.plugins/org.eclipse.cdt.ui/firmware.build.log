@@ -1,0 +1,21 @@
+18:57:57 **** Incremental Build of configuration Debug for project firmware ****
+make -j4 all 
+arm-none-eabi-g++ "../Tasks/Src/safety_task.cpp" -mcpu=cortex-m4 -std=gnu++20 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G473xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Components/AIN/Inc -I../Components/DATA/Inc -I../Components/TCA6416A/Inc -I../Components/PUTM_EV_CAN_LIBRARY/lib -I../Tasks/Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -Wextra -Wfatal-errors -pedantic -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wconversion -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Tasks/Src/safety_task.d" -MT"Tasks/Src/safety_task.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Tasks/Src/safety_task.o"
+../Tasks/Src/safety_task.cpp: In function 'void Safety_Task(void*)':
+../Tasks/Src/safety_task.cpp:34:24: warning: unused parameter 'argument' [-Wunused-parameter]
+   34 | void Safety_Task(void* argument) {
+      |                  ~~~~~~^~~~~~~~
+arm-none-eabi-g++ -o "firmware.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pwlub\Desktop\PUTM_EV_REARBOX_2024\firmware\STM32G473RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: firmware.elf
+ 
+arm-none-eabi-size  firmware.elf 
+arm-none-eabi-objdump -h -S firmware.elf  > "firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+  67392	    668	  23060	  91120	  163f0	firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: firmware.list
+ 
+
+18:57:59 Build Finished. 0 errors, 1 warnings. (took 2s.356ms)
+

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;firmware/rearbox.ioc&apos;" deleteContents="false" description="Delete resource &apos;firmware/rearbox.ioc&apos;" element1="/firmware/rearbox.ioc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1749053937169"/>&#x0A;<refactoring comment="Delete resource &apos;firmware/Core/Src/main.c&apos;" deleteContents="false" description="Delete resource &apos;firmware/Core/Src/main.c&apos;" element1="/firmware/Core/Src/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1749054091338"/>
+</session>
