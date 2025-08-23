@@ -33,21 +33,27 @@ extern osMutexId_t dataMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Communication_Task(void* argument) {
+	data.rtd_2=-1;
+	data.rtd_2_prev=-1;
+
+	    data.rtd_edge=0;
+
     for(;;) {
         // Send
         PUTM_CAN::RearboxSafety rearbox_safety = {
-            .safety_rfu1 = safety.rfu1,
-            .safety_rfu2 = safety.rfu2,
-            .safety_asms = safety.asms,
-            .safety_fw = safety.fw,
-            .safety_hv = safety.hv,
-            .safety_res = safety.res,
+            .safety_tsmp = safety.TSMP,
+            .safety_rfu = 0,
+            .safety_hv_battery = safety.hv,
+            .safety_inv_hv = safety.inv_hv,
             .safety_hvd = safety.hvd,
             .safety_inv = safety.inv,
             .safety_wheel_fl = safety.wheel_fl,
             .safety_wheel_fr = safety.wheel_fr,
             .safety_wheel_rl = safety.wheel_rl,
             .safety_wheel_rr = safety.wheel_rr,
+		    .safety_suspension_rl = safety.sus_rl,
+		    .safety_suspension_rr = safety.sus_rr,
+		    .safety_motor_front = safety.motor_front,
         };
         auto safety_message = PUTM_CAN::Can_tx_message<PUTM_CAN::RearboxSafety>(rearbox_safety, PUTM_CAN::can_tx_header_REARBOX_SAFETY);
         safety_message.send(hfdcan1);
@@ -77,16 +83,31 @@ void Communication_Task(void* argument) {
             auto pc_data = PUTM_CAN::can.get_pc_main_data();
             if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
                 data.rtd = pc_data.rtd;
+                data.rtd_2_prev=data.rtd_2;
+                data.rtd_2=data.rtd;
+                if(data.rtd_2_prev==0&& data.rtd_2==1)
+                {
+                	data.rtd_edge =1;
+                }
+                if(data.rtd_2_prev ==0 && data.rtd_2==0 )
+                {
+                	data.rtd_edge=0;
+                }
                 osMutexRelease(dataMutexHandle);
             }
         }
 
-        if(PUTM_CAN::can.get_front_data_main_new_data()) {
+        if(PUTM_CAN::can.get_front_data_main_new_data())
+        {
             auto front_data = PUTM_CAN::can.get_front_data_main_data();
-            if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
-                if(front_data.is_braking) {
+            HAL_IWDG_Refresh(&hiwdg);
+            if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK)
+            {
+                if(front_data.is_braking)
+                {
                     data.brake_light = true;
-                } else {
+                } else
+                {
                     data.brake_light = false;
                 }
 
@@ -95,7 +116,7 @@ void Communication_Task(void* argument) {
         }
 
         // Reset watchdog
-        HAL_IWDG_Refresh(&hiwdg);
+       // HAL_IWDG_Refresh(&hiwdg);
 
         osDelay(100);
     }

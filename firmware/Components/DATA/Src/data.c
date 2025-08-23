@@ -38,12 +38,12 @@ Data_TypeDef data = {
 
 Safety_TypeDef safety = {
     .tripped = false,
-    .rfu1 = false,
-    .rfu2 = false,
-    .asms = false,
-    .fw = false,
+    .sus_rl = false,
+    .sus_rr = false,
+    .TSMP = false,
+    .motor_front = false,
     .hv = false,
-    .res = false,
+    .inv_hv = false,
     .hvd = false,
     .inv = false,
     .wheel_fl = false,

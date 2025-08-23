@@ -30,16 +30,19 @@ typedef struct {
     uint8_t coolant_pressure_out;
     uint8_t suspension_l;
     uint8_t suspension_r;
+    uint8_t rtd_2;
+    uint8_t rtd_2_prev;
+    bool rtd_edge;
 } Data_TypeDef;
 
 typedef struct {
     bool tripped;
-    bool rfu1;
-    bool rfu2;
-    bool asms;
-    bool fw;
+    bool sus_rl;
+    bool sus_rr;
+    bool TSMP;
+    bool motor_front;
     bool hv;
-    bool res;
+    bool inv_hv;
     bool hvd;
     bool inv;
     bool wheel_fl;

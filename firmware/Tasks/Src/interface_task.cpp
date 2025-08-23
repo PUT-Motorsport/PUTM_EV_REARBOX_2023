@@ -38,6 +38,10 @@ extern osMutexId_t dataMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Interface_Task(void* argument) {
+
+	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+	data.rtd_edge = 0;
+
     for(;;) {
         if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
             // Analog inputs
@@ -81,23 +85,30 @@ void Interface_Task(void* argument) {
             }
 
             // RTD
-            if(data.rtd != data.rtd_prev) {
-                if(data.rtd) {
+            if(data.rtd_edge)
+            {
+            	data.rtd_edge = 0;
+//                if(data.rtd and xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION)
+//                {
                     HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_SET);
                     data.rtd_on_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-                } else {
-                    HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
-                }
+//                } else {
+//                    HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+//                }
 
-                data.rtd_prev = data.rtd;
+//                data.rtd_prev = data.rtd;
+            }
+            else if(data.rtd_edge == 0 and xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION)
+            {
+            	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
             }
 
-            if(data.rtd) {
-                if(xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION) {
-                    //data.rtd = false;
-                	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
-                }
-            }
+//            if(data.rtd) {
+//                if(xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION) {
+//                    //data.rtd = false;
+//                	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+//                }
+//            }
 
             osMutexRelease(dataMutexHandle);
         }
