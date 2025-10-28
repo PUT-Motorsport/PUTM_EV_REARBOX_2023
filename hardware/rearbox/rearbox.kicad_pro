@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.15
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -523,7 +523,6 @@
         "bus_width": 12,
         "clearance": 0.125,
         "diff_pair_gap": 0.15,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.2,
@@ -777,24 +776,8 @@
       "CAN Transceiver"
     ],
     [
-      "f1ed15a3-9302-436f-b25a-713477aeadf3",
-      "CAN Transceiver 2"
-    ],
-    [
       "91248db3-ac16-4fb7-9cfe-25145bb94249",
       "Brake Light"
-    ],
-    [
-      "12f12a63-cabc-40cf-a64b-d1bd8b3dd459",
-      "Fans"
-    ],
-    [
-      "2f82735d-d185-44cc-bb86-fc399780134d",
-      "Pumps"
-    ],
-    [
-      "23ffbfb4-d932-48bb-a16b-e7ed705895f1",
-      "ASSI"
     ],
     [
       "562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a",
@@ -821,18 +804,6 @@
       "Safety Input 3"
     ],
     [
-      "264ec557-c33b-4d6e-8249-7c546f6f500a",
-      "Oil Temperature Sensors"
-    ],
-    [
-      "2ebbc597-c328-4a79-a9b9-9ad195d56b16",
-      "Analog Input 1"
-    ],
-    [
-      "388565cf-56d9-4d05-bbee-ba12b3a092d4",
-      "Analog Input 2"
-    ],
-    [
       "a7dfb715-9f45-42ac-b5d4-81823a559192",
       "Coolant Pressure Sensors"
     ],
@@ -855,26 +826,6 @@
     [
       "ecab03c8-b663-4f2e-b6a7-722df39ecdd2",
       "Analog Input 6"
-    ],
-    [
-      "69512f7a-f184-42ec-83b9-17af07567925",
-      "Analog Input 7"
-    ],
-    [
-      "620acd23-76d3-49a1-9dab-637cd753e552",
-      "Suspension Potentiometers"
-    ],
-    [
-      "f100b46f-6459-47c3-aa99-e404a54be994",
-      "Analog Input 8"
-    ],
-    [
-      "39d7f907-f5cf-4f4a-a666-cbf77b459a24",
-      "Analog Input 9"
-    ],
-    [
-      "ae02a5e7-3434-4bcc-98d7-f72e76418900",
-      "Suspension Load Cells"
     ]
   ],
   "text_variables": {

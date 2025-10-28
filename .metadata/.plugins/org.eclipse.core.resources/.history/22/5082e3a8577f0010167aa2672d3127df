@@ -38,6 +38,7 @@ extern osMutexId_t dataMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Interface_Task(void* argument) {
+	data.rtd_prev=1;
     for(;;) {
         if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
             // Analog inputs
@@ -75,7 +76,7 @@ void Interface_Task(void* argument) {
 
             // Brake Light
             if(data.brake_light) { //30.07.2025 currently using ASSI B as brake light
-                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_G_Pin, GPIO_PIN_SET);
+                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_SET);
             } else {
                 HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_RESET);
             }

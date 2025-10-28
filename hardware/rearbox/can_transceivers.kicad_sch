@@ -24,7 +24,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 101.6) (xy 102.87 101.6)
+			(xy 101.6 96.52) (xy 102.87 96.52)
 		)
 		(stroke
 			(width 0)
@@ -34,13 +34,13 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 92.71) (xy 168.91 92.71)
+			(xy 100.33 101.6) (xy 102.87 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6ff57fb3-c13d-4205-89a1-59faa793998c")
+		(uuid "718aee9b-71e6-4c5c-b668-64075ccf1aa0")
 	)
 	(wire
 		(pts
@@ -54,16 +54,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 101.6) (xy 168.91 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e25cb90-b2b8-49fd-b622-69c998c6fc32")
-	)
-	(wire
-		(pts
 			(xy 101.6 92.71) (xy 102.87 92.71)
 		)
 		(stroke
@@ -72,47 +62,16 @@
 		)
 		(uuid "a7608c8d-b7b8-4029-9cdd-5c9b1a3ea257")
 	)
-	(wire
-		(pts
-			(xy 195.58 92.71) (xy 196.85 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc8aa926-8701-4c1a-bca6-88da55bd9044")
-	)
-	(wire
-		(pts
-			(xy 195.58 101.6) (xy 196.85 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0d161cc-f42b-49ad-8721-e74fa629fec9")
-	)
-	(hierarchical_label "CAN2_RX"
-		(shape output)
-		(at 167.64 101.6 180)
+	(hierarchical_label "STBY_CAN"
+		(shape input)
+		(at 100.33 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "42c5201f-42ef-453e-b8b4-9ecbfbc791c4")
-	)
-	(hierarchical_label "CAN2+"
-		(shape bidirectional)
-		(at 196.85 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6418fe42-cd57-4326-b90c-500b45e49d40")
+		(uuid "51d92467-161b-495a-9793-34ebf1c5fc8b")
 	)
 	(hierarchical_label "CAN-"
 		(shape bidirectional)
@@ -125,20 +84,9 @@
 		)
 		(uuid "8215c5c3-99bb-4edc-a4a3-5e568cff5eb1")
 	)
-	(hierarchical_label "CAN2-"
-		(shape bidirectional)
-		(at 196.85 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8874ef75-09ba-4d04-a603-665cfdfc5355")
-	)
 	(hierarchical_label "CAN_RX"
 		(shape output)
-		(at 101.6 101.6 180)
+		(at 101.6 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -146,17 +94,6 @@
 			(justify right)
 		)
 		(uuid "8a76a4f5-376e-4f1b-8b09-58487b256b6b")
-	)
-	(hierarchical_label "CAN2_TX"
-		(shape input)
-		(at 167.64 92.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "afbab3ca-539a-4170-98aa-6b2a0ef3fa55")
 	)
 	(hierarchical_label "CAN_TX"
 		(shape input)
@@ -196,7 +133,7 @@
 		)
 		(uuid "eec2c93a-0fce-4d3a-ab43-9e1e0481c06c")
 		(property "Sheetname" "CAN Transceiver"
-			(at 116.84 97.0784 0)
+			(at 115.57 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -214,7 +151,7 @@
 			)
 		)
 		(pin "RXD" output
-			(at 102.87 101.6 180)
+			(at 102.87 96.52 180)
 			(uuid "17f8f0d2-1f71-4c7d-ac68-e83653577726")
 			(effects
 				(font
@@ -253,90 +190,14 @@
 				(justify right)
 			)
 		)
-		(instances
-			(project "suspension_tension_meter"
-				(path "/d29c2854-1cff-48df-9335-a3932490d817"
-					(page "4")
-				)
-			)
-			(project "rearbox"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/38408e41-dfb1-4c27-acb0-3f1224cc8789"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 168.91 88.9)
-		(size 26.67 16.51)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "f1ed15a3-9302-436f-b25a-713477aeadf3")
-		(property "Sheetname" "CAN Transceiver 2"
-			(at 181.61 97.0784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sheetfile" "can_transceiver.kicad_sch"
-			(at 168.91 105.9946 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "RXD" output
-			(at 168.91 101.6 180)
-			(uuid "047e2a6c-c5e2-49e6-b977-7ea9b84ac0d9")
+		(pin "STBY_CAN_1" input
+			(at 102.87 101.6 180)
+			(uuid "eaa5c394-31f7-42c2-993f-e83ca4162ae2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(pin "TXD" input
-			(at 168.91 92.71 180)
-			(uuid "4bef073a-7b89-4297-b836-8550ce7aaaa8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "CAN-" bidirectional
-			(at 195.58 101.6 0)
-			(uuid "83b54b9d-7a81-48dc-b174-c7e77bf3c1d4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CAN+" bidirectional
-			(at 195.58 92.71 0)
-			(uuid "f2aa4e96-31f3-4fb2-aa8f-0c29324e5181")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(instances
@@ -347,7 +208,7 @@
 			)
 			(project "rearbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/38408e41-dfb1-4c27-acb0-3f1224cc8789"
-					(page "6")
+					(page "5")
 				)
 			)
 		)

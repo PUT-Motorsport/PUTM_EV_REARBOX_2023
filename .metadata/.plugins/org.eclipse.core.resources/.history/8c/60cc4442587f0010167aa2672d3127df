@@ -1,0 +1,117 @@
+/**
+ ******************************************************************************
+ * @file           : interface_task.cpp
+ * @brief          : Input/output interfacing task
+ *
+ ******************************************************************************
+ */
+
+/* Includes ------------------------------------------------------------------*/
+#include "interface_task.h"
+#include "ain.h"
+#include "data.h"
+#include "tca6416a.h"
+
+#include "FreeRTOS.h"
+#include "cmsis_os2.h"
+#include "gpio.h"
+#include "main.h"
+#include "portable.h"
+#include "task.h"
+
+/* Typedefs ------------------------------------------------------------------*/
+
+/* Defines -------------------------------------------------------------------*/
+
+/* Macros --------------------------------------------------------------------*/
+
+/* Private variables ---------------------------------------------------------*/
+
+/* Public variables ----------------------------------------------------------*/
+extern osMutexId_t dataMutexHandle;
+
+/* Private function prototypes -----------------------------------------------*/
+
+/* Public function prototypes ------------------------------------------------*/
+
+/* Private functions ---------------------------------------------------------*/
+
+/* Public functions ----------------------------------------------------------*/
+void Interface_Task(void* argument) {
+
+	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+
+    for(;;) {
+        if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK) {
+            // Analog inputs
+          //  temperature.mono = AIN_GetTemperature(&hain_mono_temperature);
+            temperature.coolant_in = AIN_GetTemperature(&hain_coolant_temperature_in);
+            temperature.coolant_out = AIN_GetTemperature(&hain_coolant_temperature_out);
+           // temperature.oil_l = AIN_GetTemperature(&hain_oil_temperature_l);
+            //temperature.oil_r = AIN_GetTemperature(&hain_oil_temperature_r);
+
+          //  data.coolant_pressure_in = AIN_GetPressure(&hain_coolant_pressure_in);
+           // data.coolant_pressure_out = AIN_GetPressure(&hain_coolant_pressure_out);
+            //data.suspension_l = AIN_GetResistance(&hain_suspension_potentiometer_l);
+            //data.suspension_r = AIN_GetResistance(&hain_suspension_potentiometer_r);
+
+            // LEDs
+            data.safety_led = safety.tripped;
+
+            if(data.error_led || data.led_test) {
+                TCA6416A_WritePin(&htca, PIN_ERROR_LED, TCA_PIN_SET);
+            } else {
+                TCA6416A_WritePin(&htca, PIN_ERROR_LED, TCA_PIN_RESET);
+            }
+
+            if(data.safety_led || data.led_test) {
+                TCA6416A_WritePin(&htca, PIN_SAFETY_LED, TCA_PIN_SET);
+            } else {
+                TCA6416A_WritePin(&htca, PIN_SAFETY_LED, TCA_PIN_RESET);
+            }
+
+            if(data.fuse_led || data.led_test) {
+                TCA6416A_WritePin(&htca, PIN_FUSE_LED, TCA_PIN_SET);
+            } else {
+                TCA6416A_WritePin(&htca, PIN_FUSE_LED, TCA_PIN_RESET);
+            }
+
+            // Brake Light
+            if(data.brake_light) { //30.07.2025 currently using ASSI B as brake light
+                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_SET);
+            } else {
+                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_RESET);
+            }
+
+            // RTD
+            if(data.rtd_edge)
+            {
+            	data.rtd_edge = 0;
+//                if(data.rtd and xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION)
+//                {
+                    HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_SET);
+                    data.rtd_on_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
+//                } else {
+//                    HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+//                }
+
+//                data.rtd_prev = data.rtd;
+            }
+            else if(data.rtd_edge == 0 and xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION)
+            {
+            	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+            }
+
+//            if(data.rtd) {
+//                if(xTaskGetTickCount() * portTICK_PERIOD_MS - data.rtd_on_time > RTD_SOUND_DURATION) {
+//                    //data.rtd = false;
+//                	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
+//                }
+//            }
+
+            osMutexRelease(dataMutexHandle);
+        }
+
+        osDelay(100);
+    }
+}

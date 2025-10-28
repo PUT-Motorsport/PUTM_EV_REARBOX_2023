@@ -11,4 +11,13 @@
 		<item key="size.width" value="384"/>
 		<item key="size.height" value="180"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="HAL_IWDG_Refresh"/>
+			<item value="iwdg"/>
+			<item value="HAL_FDCAN_RxFifo0Callback"/>
+		</list>
+	</section>
 </section>
