@@ -2563,6 +2563,16 @@
 		)
 		(uuid "c07713ed-60bd-439e-afbf-f5955602ef6b")
 	)
+	(label "GNDISO_CAN"
+		(at 58.42 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3b1bb71-a818-4b92-beb3-1638836990d9")
+	)
 	(label "CAN1_TX"
 		(at 115.57 62.23 0)
 		(effects
