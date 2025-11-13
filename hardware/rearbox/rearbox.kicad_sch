@@ -5385,10 +5385,6 @@
 		(uuid "265de2bc-af16-4a6b-9bd0-8dfaad0f73ee")
 	)
 	(no_connect
-		(at 66.04 59.69)
-		(uuid "328e47c8-4e12-4673-8d31-30aa7ca58b05")
-	)
-	(no_connect
 		(at 101.6 46.99)
 		(uuid "36e74d34-d529-4dd1-9afc-144d82117cd7")
 	)
@@ -5904,7 +5900,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 104.14) (xy 151.13 104.14)
+			(xy 149.86 110.49) (xy 151.13 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6104,6 +6100,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 59.69) (xy 66.04 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "606202aa-c293-4895-92d5-73219939030a")
+	)
+	(wire
+		(pts
 			(xy 227.33 68.58) (xy 228.6 68.58)
 		)
 		(stroke
@@ -6264,7 +6270,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 101.6) (xy 151.13 101.6)
+			(xy 149.86 107.95) (xy 151.13 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6541,6 +6547,16 @@
 			(type default)
 		)
 		(uuid "9f503344-4423-4a2b-9e93-a1c363a755f0")
+	)
+	(wire
+		(pts
+			(xy 181.61 95.25) (xy 182.88 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1fb4a15-f85c-48bd-b119-b0e09a8308d6")
 	)
 	(wire
 		(pts
@@ -6874,6 +6890,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 95.25) (xy 151.13 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd1202a4-1fd5-4175-82ab-7d5002ac0961")
+	)
+	(wire
+		(pts
 			(xy 80.01 181.61) (xy 80.01 184.15)
 		)
 		(stroke
@@ -7114,7 +7140,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 99.06) (xy 151.13 99.06)
+			(xy 149.86 105.41) (xy 151.13 105.41)
 		)
 		(stroke
 			(width 0)
@@ -7252,6 +7278,16 @@
 		)
 		(uuid "0e61c2b6-55c9-4bbc-9e24-f7ff6ae0ce2d")
 	)
+	(label "BACKUP_BRAKE_LIGHT"
+		(at 149.86 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "10ed0993-632b-4827-a2d9-fe3af6e9bd81")
+	)
 	(label "WATER_TEMPERATURE2"
 		(at 102.87 41.91 0)
 		(effects
@@ -7293,7 +7329,7 @@
 		(uuid "3e89cffd-fc2a-4408-a818-52ae101caa5e")
 	)
 	(label "LED_FUSE"
-		(at 149.86 104.14 180)
+		(at 149.86 110.49 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7332,6 +7368,16 @@
 		)
 		(uuid "54982fc5-df12-4c83-843d-86c27d0cd027")
 	)
+	(label "BACKUP_BRAKE_LIGHT"
+		(at 63.5 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5c54be8f-e58f-435b-a62d-495daa2e9dc2")
+	)
 	(label "CAN_TX"
 		(at 102.87 67.31 0)
 		(effects
@@ -7363,7 +7409,7 @@
 		(uuid "7ccc946b-8d41-411c-8c42-6abc18c34858")
 	)
 	(label "LED_ERROR"
-		(at 149.86 99.06 180)
+		(at 149.86 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7493,7 +7539,7 @@
 		(uuid "c6502805-d9cf-4dcd-8e00-990a20c1d1c9")
 	)
 	(label "LED_SAFETY"
-		(at 149.86 101.6 180)
+		(at 149.86 107.95 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7902,6 +7948,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BACKUP_BRAKE_LIGHT_OUT"
+		(shape input)
+		(at 182.88 95.25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45e3ea26-ea7d-4cc6-b86a-a31b455a3905")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 211.1443 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -12809,7 +12877,7 @@
 		)
 	)
 	(sheet
-		(at 151.13 96.52)
+		(at 151.13 102.87)
 		(size 30.48 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12824,7 +12892,7 @@
 		)
 		(uuid "6999686b-4026-4ea7-9227-634603a79198")
 		(property "Sheetname" "LEDs"
-			(at 166.37 101.6 0)
+			(at 166.37 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12832,7 +12900,7 @@
 			)
 		)
 		(property "Sheetfile" "leds.kicad_sch"
-			(at 151.13 116.1546 0)
+			(at 151.13 122.5046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12842,7 +12910,7 @@
 			)
 		)
 		(pin "FUSE" input
-			(at 151.13 104.14 180)
+			(at 151.13 110.49 180)
 			(uuid "a2f2c5b9-4336-407d-811d-b067b5fae44c")
 			(effects
 				(font
@@ -12852,7 +12920,7 @@
 			)
 		)
 		(pin "ERROR" input
-			(at 151.13 99.06 180)
+			(at 151.13 105.41 180)
 			(uuid "64f3756b-f6e2-47e1-939e-75044031ca4a")
 			(effects
 				(font
@@ -12862,7 +12930,7 @@
 			)
 		)
 		(pin "SAFETY" input
-			(at 151.13 101.6 180)
+			(at 151.13 107.95 180)
 			(uuid "dc88b986-b659-4545-94be-14acda022e54")
 			(effects
 				(font
@@ -12922,7 +12990,7 @@
 	)
 	(sheet
 		(at 151.13 88.9)
-		(size 30.48 5.08)
+		(size 30.48 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -12966,6 +13034,26 @@
 		(pin "OUT" output
 			(at 181.61 91.44 0)
 			(uuid "1752a683-a117-4a77-98f0-6a0742cdbedd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN_BACKUP" input
+			(at 151.13 95.25 180)
+			(uuid "12671a21-54ec-4e11-804d-2b59a4bf8683")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_BACKUP" output
+			(at 181.61 95.25 0)
+			(uuid "90b96877-10fc-4f25-9a0b-a4dc3f0fae5e")
 			(effects
 				(font
 					(size 1.27 1.27)

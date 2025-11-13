@@ -3071,18 +3071,6 @@
 		)
 		(uuid "9bdc0968-698b-4d71-b83a-e67402bdc4ed")
 	)
-	(text "ASSI_OUT_B"
-		(exclude_from_sim no)
-		(at 106.68 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 212 180 18 1)
-			)
-			(justify right)
-		)
-		(uuid "bc4f5a83-aa9e-4c89-8ac5-dd02d9f2b4c0")
-	)
 	(text "1*"
 		(exclude_from_sim no)
 		(at 138.43 77.47 0)
@@ -3287,10 +3275,6 @@
 	(no_connect
 		(at 107.95 81.28)
 		(uuid "4a79e2b7-4d32-4263-b3f8-4547e4122978")
-	)
-	(no_connect
-		(at 107.95 124.46)
-		(uuid "6f51edff-ab9c-4264-ad7e-df8e5e7e964b")
 	)
 	(no_connect
 		(at 120.65 73.66)
@@ -3498,7 +3482,7 @@
 	)
 	(polyline
 		(pts
-			(xy 92.71 118.11) (xy 92.71 124.46)
+			(xy 92.71 118.11) (xy 92.71 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3608,7 +3592,7 @@
 	)
 	(polyline
 		(pts
-			(xy 92.71 124.46) (xy 95.25 124.46)
+			(xy 92.71 121.92) (xy 95.25 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3975,6 +3959,16 @@
 			(type default)
 		)
 		(uuid "d6814fd8-4e20-47f1-b63b-1ff207c8718e")
+	)
+	(wire
+		(pts
+			(xy 106.68 124.46) (xy 107.95 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da527219-51c9-415c-a57a-eaff370a2406")
 	)
 	(wire
 		(pts
@@ -4564,6 +4558,28 @@
 		(uuid "a6a993f6-461e-49e3-94bd-586f6b317aa4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 93.1909 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BACKUP_BRAKE_LIGHT_OUT"
+		(shape input)
+		(at 106.68 124.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ab272cb8-f0ce-4ada-8ed3-e3a46b2dd098")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 78.4157 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
