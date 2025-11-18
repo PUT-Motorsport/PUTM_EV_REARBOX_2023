@@ -731,6 +731,17 @@
 	)
 	(text "+24V"
 		(exclude_from_sim no)
+		(at 222.123 85.979 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1966530d-8ef4-44c3-8d47-abd3067cae36")
+	)
+	(text "+24V"
+		(exclude_from_sim no)
 		(at 161.163 84.709 0)
 		(effects
 			(font
@@ -751,6 +762,17 @@
 		)
 		(uuid "bb8b8877-0283-46ba-ac89-ed16f4abacf3")
 	)
+	(text "Buzzer"
+		(exclude_from_sim no)
+		(at 225.425 98.806 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecb5e396-7fd4-473b-a288-164e3259bc62")
+	)
 	(junction
 		(at 138.43 107.95)
 		(diameter 0)
@@ -762,6 +784,28 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b6b15287-4219-4ea3-8b6e-85a01a3200b7")
+	)
+	(junction
+		(at 190.5 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c55e5d35-4831-4537-99a7-3418425bbeaa")
+	)
+	(junction
+		(at 200.66 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffbc8ce2-5f2e-46f6-a2a3-7bbb9a7362c6")
+	)
+	(polyline
+		(pts
+			(xy 226.06 99.06) (xy 223.52 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ecdb54d-a0c1-4cbb-8580-eb5d9f743947")
 	)
 	(polyline
 		(pts
@@ -813,6 +857,36 @@
 		)
 		(uuid "47e99316-4e41-446e-955f-90bb7a5e50ae")
 	)
+	(wire
+		(pts
+			(xy 190.5 116.84) (xy 193.04 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49c26ebe-03ff-433d-8001-9fcaf78b3df3")
+	)
+	(polyline
+		(pts
+			(xy 223.52 91.44) (xy 226.06 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4af48e4d-7d44-4646-ba9f-c37055d023b5")
+	)
+	(polyline
+		(pts
+			(xy 225.5266 88.7984) (xy 224.7646 87.5284)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4af9baaf-d984-4cb3-8d16-0603bbe0c709")
+	)
 	(polyline
 		(pts
 			(xy 162.56 90.17) (xy 165.1 90.17)
@@ -835,6 +909,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 101.6) (xy 200.66 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67d8e54d-3c51-428b-8b80-2fd9ecefa7f9")
+	)
+	(wire
+		(pts
 			(xy 138.43 107.95) (xy 138.43 115.57)
 		)
 		(stroke
@@ -845,6 +929,26 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 109.22) (xy 190.5 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bf38961-82e2-44f9-a4e2-2c399375afa9")
+	)
+	(polyline
+		(pts
+			(xy 226.06 91.44) (xy 226.06 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73ecaab4-fff1-4ad4-9d28-13ecc5221e9f")
+	)
+	(wire
+		(pts
 			(xy 148.59 115.57) (xy 148.59 118.11)
 		)
 		(stroke
@@ -852,6 +956,16 @@
 			(type default)
 		)
 		(uuid "96293c54-266b-4ff9-bccd-194adc98572e")
+	)
+	(wire
+		(pts
+			(xy 198.12 116.84) (xy 200.66 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99cc640e-d548-4e7d-bfca-5b37cac4e75c")
 	)
 	(polyline
 		(pts
@@ -872,6 +986,26 @@
 			(type default)
 		)
 		(uuid "a525e65f-10f3-464b-a85d-ce2a5661ed86")
+	)
+	(wire
+		(pts
+			(xy 190.5 109.22) (xy 193.04 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6b70669-8391-4900-93a8-daee7d9e654d")
+	)
+	(wire
+		(pts
+			(xy 200.66 116.84) (xy 200.66 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a81810ab-8b2b-4ff9-8121-f774e370fd48")
 	)
 	(polyline
 		(pts
@@ -905,6 +1039,26 @@
 	)
 	(polyline
 		(pts
+			(xy 224.7646 87.5284) (xy 224.7646 90.0938)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b55f219a-e232-4020-988a-5bfa16fe725b")
+	)
+	(wire
+		(pts
+			(xy 200.66 114.3) (xy 200.66 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd53a141-bd6b-4eb1-8b05-e225b956e99d")
+	)
+	(polyline
+		(pts
 			(xy 163.8046 88.8746) (xy 163.8046 90.1446)
 		)
 		(stroke
@@ -912,6 +1066,16 @@
 			(type default)
 		)
 		(uuid "bf01004b-9a4f-451f-bc3c-3cb38dd1a75c")
+	)
+	(wire
+		(pts
+			(xy 187.96 109.22) (xy 190.5 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c18c652b-80d7-4008-b02c-12717a4cf585")
 	)
 	(wire
 		(pts
@@ -933,6 +1097,16 @@
 		)
 		(uuid "c3e283cc-b830-41be-8d4d-533f0d506430")
 	)
+	(polyline
+		(pts
+			(xy 223.52 99.06) (xy 223.52 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4de7032-8b71-4f69-872f-d133bb11b0f4")
+	)
 	(wire
 		(pts
 			(xy 128.27 107.95) (xy 130.81 107.95)
@@ -942,6 +1116,56 @@
 			(type default)
 		)
 		(uuid "d25b84d8-0e08-4b2a-9288-04df34d51111")
+	)
+	(wire
+		(pts
+			(xy 203.2 101.6) (xy 200.66 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3d5ce0d-0ba2-4ce6-87b3-fc8e0c273841")
+	)
+	(polyline
+		(pts
+			(xy 224.0026 88.7984) (xy 224.7646 87.5284)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9fd741d-ecc1-47bd-8e8a-ae7b1585a2b5")
+	)
+	(wire
+		(pts
+			(xy 180.34 109.22) (xy 182.88 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2f2c64c-de7f-410f-a5b2-89fd55acd02e")
+	)
+	(polyline
+		(pts
+			(xy 218.44 101.6) (xy 224.79 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4d876a4-1dff-41ef-8d41-c761e0eab7af")
+	)
+	(polyline
+		(pts
+			(xy 224.7646 90.1446) (xy 224.7646 91.4146)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f84c85aa-1993-4c83-951e-db7a93d6adf7")
 	)
 	(wire
 		(pts
@@ -963,6 +1187,27 @@
 		)
 		(uuid "feef49af-973b-4fac-9ebe-b584737d623e")
 	)
+	(polyline
+		(pts
+			(xy 224.79 99.06) (xy 224.79 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fffbb96f-7f08-4910-84d1-8f3e0b2a5e78")
+	)
+	(hierarchical_label "BACKUP_OUT"
+		(shape output)
+		(at 203.2 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4453aa21-f9eb-4d5c-9745-5eda2e5ac6db")
+	)
 	(hierarchical_label "IN"
 		(shape input)
 		(at 128.27 107.95 180)
@@ -974,6 +1219,17 @@
 		)
 		(uuid "49d551d4-9b3f-4542-92f8-e01fc0cd05fe")
 	)
+	(hierarchical_label "BACKUP_IN"
+		(shape input)
+		(at 180.34 109.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "85c70437-b57f-4d33-af17-b85335b6d82e")
+	)
 	(hierarchical_label "OUT"
 		(shape output)
 		(at 151.13 100.33 0)
@@ -984,6 +1240,205 @@
 			(justify left)
 		)
 		(uuid "d05d8c33-e585-427c-acdb-2c7275ea8bba")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 185.42 109.22 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2bee1476-b3bb-4255-a4d5-d469cec506bf")
+		(property "Reference" "R6"
+			(at 185.42 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 185.42 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 185.42 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "144dcef7-db0f-4dcc-9a43-dcba28199c29")
+		)
+		(pin "2"
+			(uuid "a8eaeb76-858b-4c77-b28e-06bc1af0db4a")
+		)
+		(instances
+			(project "rearbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 200.66 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5501c7c3-732b-4896-82d2-b3cb4e6cd5ea")
+		(property "Reference" "#PWR032"
+			(at 200.66 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38996f23-7d57-4fe9-b41d-79826c353488")
+		)
+		(instances
+			(project "rearbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 195.58 116.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c628eff-21b2-47f1-bc72-5bef763ba3b8")
+		(property "Reference" "R7"
+			(at 195.58 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 195.58 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 195.58 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 195.58 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "139fb529-a534-40cb-a46c-60b4696f5148")
+		)
+		(pin "2"
+			(uuid "3d067d83-bc96-4c47-b3d8-c7c3783d26ea")
+		)
+		(instances
+			(project "rearbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -1298,6 +1753,93 @@
 		)
 	)
 	(symbol
+		(lib_id "BUK6D210:BUK6D210")
+		(at 198.12 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ec3db451-a9c3-4f1f-bb40-c7c4750a5cff")
+		(property "Reference" "Q3"
+			(at 203.2 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BUK6D210"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Local_Library:Diodes_UDFN2020-6_Type-F"
+			(at 199.39 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/datasheet/2/916/BUK6D210_60E-1596115.pdf"
+			(at 196.85 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e553215a-0362-49cc-ab24-acb56d8ca667")
+		)
+		(pin "2"
+			(uuid "32e6917e-cc1a-402d-9ed1-1d27784096ce")
+		)
+		(pin "3"
+			(uuid "a4199cee-5295-481b-a420-58629c94aac4")
+		)
+		(pin "4"
+			(uuid "c7c4a240-619f-4317-bc95-e131ef8343a8")
+		)
+		(pin "5"
+			(uuid "5bcf1c39-7b81-49cb-98e0-f03bb8f20691")
+		)
+		(pin "6"
+			(uuid "054cbf90-3222-440d-a458-f5a593d90a02")
+		)
+		(pin "7"
+			(uuid "be5462b6-cf00-4261-bbb1-50ca6f9c8e32")
+		)
+		(pin "8"
+			(uuid "932abc60-bc44-44b5-9652-e774aebc616a")
+		)
+		(instances
+			(project "rearbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint_Small")
 		(at 138.43 107.95 0)
 		(unit 1)
@@ -1359,6 +1901,73 @@
 			(project "rearbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
 					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 190.5 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f0e34856-de8c-4cf4-8847-9428f4c0853c")
+		(property "Reference" "TP6"
+			(at 189.23 107.95 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 191.77 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 195.58 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 195.58 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 190.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d701b7c-46e0-4f71-86f2-5f4a61282e1a")
+		)
+		(instances
+			(project "rearbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a"
+					(reference "TP6")
 					(unit 1)
 				)
 			)

@@ -5381,10 +5381,6 @@
 		(uuid "23785361-a845-4830-b0e8-955f56484594")
 	)
 	(no_connect
-		(at 66.04 62.23)
-		(uuid "265de2bc-af16-4a6b-9bd0-8dfaad0f73ee")
-	)
-	(no_connect
 		(at 101.6 46.99)
 		(uuid "36e74d34-d529-4dd1-9afc-144d82117cd7")
 	)
@@ -5457,6 +5453,10 @@
 		(uuid "a284e56d-f49c-4b62-b4e9-3c6e771320c3")
 	)
 	(no_connect
+		(at 101.6 59.69)
+		(uuid "afb52abf-5cce-47b7-a472-e6e35c941038")
+	)
+	(no_connect
 		(at 101.6 80.01)
 		(uuid "b0805d77-2f2b-40bf-828a-1d943c2b61ef")
 	)
@@ -5527,10 +5527,6 @@
 	(no_connect
 		(at 22.86 182.88)
 		(uuid "f3913e38-14fa-415a-b303-38f4636f4dd4")
-	)
-	(no_connect
-		(at 101.6 59.69)
-		(uuid "f454ad33-5a72-487b-ae4a-09c951fafed6")
 	)
 	(no_connect
 		(at 101.6 105.41)
@@ -5870,6 +5866,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 81.28) (xy 151.13 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35bda5ba-392b-407c-9389-11d3c5818c45")
+	)
+	(wire
+		(pts
 			(xy 227.33 55.88) (xy 228.6 55.88)
 		)
 		(stroke
@@ -5950,7 +5956,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 83.82) (xy 182.88 83.82)
+			(xy 181.61 77.47) (xy 182.88 77.47)
 		)
 		(stroke
 			(width 0)
@@ -6420,6 +6426,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 81.28) (xy 182.88 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bc2f5e0-c0f2-4747-acd0-f49ccb13aa18")
+	)
+	(wire
+		(pts
 			(xy 125.73 173.99) (xy 125.73 172.72)
 		)
 		(stroke
@@ -6840,6 +6856,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 62.23) (xy 66.04 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3ea5016-985b-4fa8-9303-2fcdc7c6dd1b")
+	)
+	(wire
+		(pts
 			(xy 83.82 127) (xy 85.09 127)
 		)
 		(stroke
@@ -7250,7 +7276,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 83.82) (xy 151.13 83.82)
+			(xy 149.86 77.47) (xy 151.13 77.47)
 		)
 		(stroke
 			(width 0)
@@ -7308,6 +7334,16 @@
 		)
 		(uuid "2d15ec2d-57ad-4d26-ba61-0fe6672aebf2")
 	)
+	(label "BACKUP_RTDS"
+		(at 149.86 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "33fd8fef-5501-43da-842d-d06332b45616")
+	)
 	(label "LED_SAFETY"
 		(at 260.35 35.56 0)
 		(effects
@@ -7347,6 +7383,16 @@
 			(justify right bottom)
 		)
 		(uuid "44c405a9-e416-45ab-b0f0-b63f131e8272")
+	)
+	(label "BACKUP_RTDS"
+		(at 63.5 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4ef96723-57e4-4c40-bc53-cfaed14fc653")
 	)
 	(label "XIAO_GPIO"
 		(at 151.13 133.35 180)
@@ -7569,7 +7615,7 @@
 		(uuid "d0fdcffb-af01-4e75-9d86-01b82c6305af")
 	)
 	(label "RTDS"
-		(at 149.86 83.82 180)
+		(at 149.86 77.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8304,6 +8350,28 @@
 			)
 		)
 	)
+	(global_label "BACKUP_RTDS_OUT"
+		(shape input)
+		(at 182.88 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b6d0a7e9-b3a4-46df-a1c2-4294e7a989a3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.6452 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "WATER_PRESSURE_IN2"
 		(shape input)
 		(at 227.33 97.79 180)
@@ -8438,7 +8506,7 @@
 	)
 	(global_label "RTDS_OUT"
 		(shape output)
-		(at 182.88 83.82 0)
+		(at 182.88 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8448,7 +8516,7 @@
 		)
 		(uuid "ea48381f-d1f8-4ea1-9029-8049fb36c965")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.1785 83.82 0)
+			(at 195.1785 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12585,8 +12653,8 @@
 		)
 	)
 	(sheet
-		(at 151.13 81.28)
-		(size 30.48 5.08)
+		(at 151.13 74.93)
+		(size 30.48 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -12600,7 +12668,7 @@
 		)
 		(uuid "562e38ba-d94a-4627-8fa0-e9eb7b5e4e9a")
 		(property "Sheetname" "RTDS"
-			(at 166.37 83.82 0)
+			(at 166.37 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12608,7 +12676,7 @@
 			)
 		)
 		(property "Sheetfile" "ready_to_drive_sound.kicad_sch"
-			(at 151.13 100.9146 0)
+			(at 151.13 94.5646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12618,7 +12686,7 @@
 			)
 		)
 		(pin "OUT" output
-			(at 181.61 83.82 0)
+			(at 181.61 77.47 0)
 			(uuid "185743c9-3dc5-4d45-9d0e-96c565359fc8")
 			(effects
 				(font
@@ -12628,13 +12696,33 @@
 			)
 		)
 		(pin "IN" input
-			(at 151.13 83.82 180)
+			(at 151.13 77.47 180)
 			(uuid "7d5e4432-e38f-4130-a0a0-80dc34fc1cc5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "BACKUP_IN" input
+			(at 151.13 81.28 180)
+			(uuid "c4415fc0-5c66-4819-a078-0c9c8993518a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BACKUP_OUT" output
+			(at 181.61 81.28 0)
+			(uuid "878887dc-b739-447d-acda-1c8a2e91dd45")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
