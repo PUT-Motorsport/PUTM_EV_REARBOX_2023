@@ -130,7 +130,7 @@ int main(void)
     if(HAL_FDCAN_ConfigFilter(&hfdcan1, &filter_config) != HAL_OK) {
         Error_Handler();
     }
-
+/*
     if(HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK) {
         Error_Handler();
     }
@@ -138,7 +138,7 @@ int main(void)
     if(HAL_FDCAN_Start(&hfdcan1) != HAL_OK) {
         Error_Handler();
     }
-
+*/
     TCA6416A_Init(&htca, &hi2c3, 0x20);
     TCA6416A_SetPinMode(&htca, PIN_RFU2, TCA_PIN_INPUT);
     TCA6416A_SetPinMode(&htca, PIN_RFU1, TCA_PIN_INPUT);
