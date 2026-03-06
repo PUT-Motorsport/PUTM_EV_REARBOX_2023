@@ -1,20 +1,16 @@
 #include "communication_task.h"
-#include "can_driver.hpp"       // Nowy sterownik
+#include "can_driver.hpp" 
+#include "PUTM_CAN_M.h"
 #include "cmsis_os2.h"
 #include "data.h"
 #include "fdcan.h"
 #include "iwdg.h"
 
-/* --- Globalny sterownik --- */
-// Warto go zainicjalizować w main.cpp i przekazać tutaj lub użyć extern
-extern putm_ev_can::CanDriver can_driver; 
+extern osMutexId_t dataMutexHandle;
+putm_ev_can::CanDriver can_driver; 
 
 void Communication_Task(void* argument) {
-    /* 1. Inicjalizacja sterownika (jeśli nie zrobiono w main) */
-    // can_driver.Init(&hfdcan1);
 
-    /* 2. Rejestracja callbacku dla danych przychodzących */
-    // Callback wykona się w przerwaniu, więc tylko kopiujemy dane
     can_driver.RegisterCallback<PUTM_CAN_M_front_data_t>(
         PUTM_CAN_M_FRONT_DATA_FRAME_ID, 
         [](const PUTM_CAN_M_front_data_t& front_data) {
@@ -27,9 +23,8 @@ void Communication_Task(void* argument) {
     );
 
     for(;;) {
-        /* --- WYSYŁANIE (Transmit) --- */
-        
-        // Przykład: RearboxSafety
+
+
         PUTM_CAN_M_rearbox_safety_t safety_msg = {
             .safety_tsmp = (uint8_t)safety.TSMP,
             .safety_hv_battery = (uint8_t)safety.hv,
@@ -46,7 +41,7 @@ void Communication_Task(void* argument) {
         };
         can_driver.Send(PUTM_CAN_M_REARBOX_SAFETY_FRAME_ID, safety_msg);
 
-        // Przykład: RearboxTemperature
+
         PUTM_CAN_M_rearbox_temperature_t temp_msg = {
             .mono_temperature = (uint8_t)temperature.mono,
             .coolant_temperature_in = (uint8_t)temperature.coolant_in,

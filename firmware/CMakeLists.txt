@@ -44,6 +44,9 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
+#Add Can Library
+add_subdirectory(${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY)
+
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
@@ -78,10 +81,11 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "${PROJECT_SOURCE_DIR}/Tasks/Inc"
+    "${PROJECT_SOURCE_DIR}/Components"
     "${PROJECT_SOURCE_DIR}/Components/AIN/Inc"
     "${PROJECT_SOURCE_DIR}/Components/DATA/Inc"
-    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/lib"
-    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/lib/CanHeaders"
+    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/include"
+    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/dbc/generated"
     "${PROJECT_SOURCE_DIR}/Components/TCA6416A/Inc"
      # Add user defined include paths
 )
@@ -94,6 +98,7 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
+    putm_ev_can
 
     # Add user defined libraries
 )
