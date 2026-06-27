@@ -1,4 +1,8 @@
-# STM32CubeIDE
+# =========================
+# STM32CubeIDE & Eclipse
+# =========================
+/.metadata/
+RemoteSystemsTempFiles/
 /firmware/.settings/
 /firmware/Release/
 /firmware/Debug/
@@ -6,20 +10,75 @@
 /firmware/Middlewares/
 /firmware/*.launch
 
+# =========================
+# VS Code
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# =========================
+# CMake & Build Systems
+# =========================
+build/
+build*/
+out/
+bin/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# =========================
+# Embedded & Debuggers
+# =========================
+*.elf
+*.hex
+*.bin
+*.map
+*.uf2
+.gdb_history
+gdb.log
+openocd.log
+JLinkLog.txt
+
+# =========================
 # KiCad
+# =========================
 /hardware/*/*-backups/
 /hardware/*/*.kicad_prl
 /hardware/*/fp-info-cache
 /hardware/*/\#auto_saved_files\#
 
+# =========================
 # FreeCAD
+# =========================
 /hardware/mechanical_parts/*.FCBak
 
+# =========================
 # Interactive HTML BOM
+# =========================
 /hardware/*/bom/
 
+# =========================
 # Fabrication Toolkit
+# =========================
 /hardware/*/production/
 
+# =========================
 # Replicate Layout
+# =========================
 /hardware/*/replicate_layout.log
+
+# =========================
+# OS / Temp
+# =========================
+.DS_Store
+Thumbs.db
