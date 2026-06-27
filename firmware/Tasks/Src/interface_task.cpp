@@ -38,6 +38,7 @@ extern osMutexId_t dataMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Interface_Task(void* argument) {
+	//Log_Send(LOG_INFO, "Interface task started");
 
 	HAL_GPIO_WritePin(RTDS_GPIO_Port, RTDS_Pin, GPIO_PIN_RESET);
 	data.rtd_edge = 0;
@@ -78,10 +79,10 @@ void Interface_Task(void* argument) {
             }
 
             // Brake Light
-            if(data.brake_light) { //30.07.2025 currently using ASSI B as brake light
-                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_SET);
+            if(data.brake_light) {
+                HAL_GPIO_WritePin(BRAKE_LIGHT_GPIO_Port, BRAKE_LIGHT_Pin, GPIO_PIN_SET);
             } else {
-                HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(BRAKE_LIGHT_GPIO_Port, BRAKE_LIGHT_Pin, GPIO_PIN_RESET);
             }
 
             // RTD

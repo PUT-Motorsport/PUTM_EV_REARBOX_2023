@@ -12,7 +12,7 @@
 #include "cmsis_os2.h"
 #include "data.h"
 #include "fdcan.h"
-#include "iwdg.h"
+//#include "iwdg.h"
 
 /* Typedefs ------------------------------------------------------------------*/
 
@@ -33,6 +33,7 @@ extern osMutexId_t dataMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Communication_Task(void* argument) {
+	//Log_Send(LOG_INFO, "Communication task started");
 	data.rtd_2=-1;
 	data.rtd_2_prev=-1;
 
@@ -100,7 +101,7 @@ void Communication_Task(void* argument) {
         if(PUTM_CAN::can.get_front_data_main_new_data())
         {
             auto front_data = PUTM_CAN::can.get_front_data_main_data();
-            HAL_IWDG_Refresh(&hiwdg);
+            //HAL_IWDG_Refresh(&hiwdg);
             if(osMutexAcquire(dataMutexHandle, osWaitForever) == osOK)
             {
                 if(front_data.is_braking)

@@ -23,7 +23,8 @@
 
 /* Public variables ----------------------------------------------------------*/
 extern osMutexId_t safetyMutexHandle;
-
+//Here so we can call watchdog
+//extern IWDG_HandleTypeDef hiwdg;
 /* Private function prototypes -----------------------------------------------*/
 
 /* Public function prototypes ------------------------------------------------*/
@@ -32,9 +33,12 @@ extern osMutexId_t safetyMutexHandle;
 
 /* Public functions ----------------------------------------------------------*/
 void Safety_Task(void* argument) {
+	//Log_Send(LOG_INFO, "Safety task started");
     for(;;) {
+    	//HAL_IWDG_Refresh(&hiwdg);
         if(osMutexAcquire(safetyMutexHandle, osWaitForever) == osOK) {
-            safety.sus_rl = TCA6416A_ReadPin(&htca, PIN_RFU1);//sdc__sus_rl
+            //Log_Send(LOG_DEBUG, "Mutex acquired");
+            safety.sus_rl = TCA6416A_ReadPin(&htca, PIN_RFU1);//sdc_sus_rl
             safety.sus_rr= TCA6416A_ReadPin(&htca, PIN_RFU2);//sdc_sus_rr
             safety.TSMP = TCA6416A_ReadPin(&htca, PIN_ASMS);//TSMP
             safety.motor_front = TCA6416A_ReadPin(&htca, PIN_FW);//motor front
@@ -51,6 +55,7 @@ void Safety_Task(void* argument) {
                              safety.wheel_fr || safety.wheel_rl || safety.wheel_rr;
 
             osMutexRelease(safetyMutexHandle);
+            //Log_Send(LOG_DEBUG, "Mutex released");
         }
 
         osDelay(100);

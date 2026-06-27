@@ -40,12 +40,6 @@
         * EXTI
         * Free pins are configured automatically as Analog (this feature is enabled through
         * the Code Generation settings)
-     PB10   ------> S_TIM2_CH3
-     PB11   ------> S_TIM2_CH4
-     PB12   ------> FDCAN2_RX
-     PB13   ------> FDCAN2_TX
-     PB14   ------> S_TIM15_CH1
-     PB15   ------> S_TIM15_CH2
 */
 void MX_GPIO_Init(void)
 {
@@ -61,23 +55,19 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, BRAKE_LIGHT_Pin|RTDS_Pin|ASSI_BUZZER_Pin|ASSI_LED_R_Pin
-                          |ASSI_LED_G_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(ASSI_LED_B_GPIO_Port, ASSI_LED_B_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SENSE_ADDRESS_IN0_Pin|SENSE_ADDRESS_IN1_Pin|SENSE_ENABLE_PUMPS_Pin|SENSE_ENABLE_FANS_Pin
-                          |BOOT_SELECT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, BACKUP_BRAKE_LIGHT_Pin|RTDS_Pin|XIAO_GPIO_Pin|BRAKE_LIGHT_Pin
+                          |BACKUP_RTDS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SAFETY_RESET_GPIO_Port, SAFETY_RESET_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : BRAKE_LIGHT_Pin RTDS_Pin ASSI_BUZZER_Pin ASSI_LED_R_Pin
-                           ASSI_LED_G_Pin */
-  GPIO_InitStruct.Pin = BRAKE_LIGHT_Pin|RTDS_Pin|ASSI_BUZZER_Pin|ASSI_LED_R_Pin
-                          |ASSI_LED_G_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(BOOT_SELECT_GPIO_Port, BOOT_SELECT_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : BACKUP_BRAKE_LIGHT_Pin RTDS_Pin XIAO_GPIO_Pin BRAKE_LIGHT_Pin
+                           BACKUP_RTDS_Pin */
+  GPIO_InitStruct.Pin = BACKUP_BRAKE_LIGHT_Pin|RTDS_Pin|XIAO_GPIO_Pin|BRAKE_LIGHT_Pin
+                          |BACKUP_RTDS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -89,44 +79,28 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : ASSI_LED_B_Pin */
-  GPIO_InitStruct.Pin = ASSI_LED_B_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  /*Configure GPIO pins : PC2 PC3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(ASSI_LED_B_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : SENSE_ADDRESS_IN0_Pin SENSE_ADDRESS_IN1_Pin SENSE_ENABLE_PUMPS_Pin SENSE_ENABLE_FANS_Pin
-                           BOOT_SELECT_Pin */
-  GPIO_InitStruct.Pin = SENSE_ADDRESS_IN0_Pin|SENSE_ADDRESS_IN1_Pin|SENSE_ENABLE_PUMPS_Pin|SENSE_ENABLE_FANS_Pin
-                          |BOOT_SELECT_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  /*Configure GPIO pins : PA0 PA3 PA6 PA7
+                           PA8 PA9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_3|GPIO_PIN_6|GPIO_PIN_7
+                          |GPIO_PIN_8|GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PUMP2_Pin PUMP1_Pin */
-  GPIO_InitStruct.Pin = PUMP2_Pin|PUMP1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  /*Configure GPIO pins : PB0 PB1 PB2 PB10
+                           PB11 PB12 PB13 PB14
+                           PB15 PB5 PB6 PB9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_10
+                          |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+                          |GPIO_PIN_15|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : CAN2_RX_Pin CAN2_TX_Pin */
-  GPIO_InitStruct.Pin = CAN2_RX_Pin|CAN2_TX_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF9_FDCAN2;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : FAN_R_Pin FAN_L_Pin */
-  GPIO_InitStruct.Pin = FAN_R_Pin|FAN_L_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM15;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : SAFETY_RESET_Pin */
@@ -142,11 +116,11 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(SAFETY_INT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LOAD_CELL_DRDY_Pin */
-  GPIO_InitStruct.Pin = LOAD_CELL_DRDY_Pin;
+  /*Configure GPIO pin : STBY_CAN_Pin */
+  GPIO_InitStruct.Pin = STBY_CAN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(LOAD_CELL_DRDY_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(STBY_CAN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PD2 */
   GPIO_InitStruct.Pin = GPIO_PIN_2;
@@ -154,11 +128,12 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_9;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  /*Configure GPIO pin : BOOT_SELECT_Pin */
+  GPIO_InitStruct.Pin = BOOT_SELECT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(BOOT_SELECT_GPIO_Port, &GPIO_InitStruct);
 
 }
 

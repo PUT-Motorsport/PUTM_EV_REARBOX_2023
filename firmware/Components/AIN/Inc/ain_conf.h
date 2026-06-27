@@ -17,12 +17,12 @@
 /**
  * @brief Number of ADC1 channels
  */
-#define AIN_ADC1_CHANNELS 6
+#define AIN_ADC1_CHANNELS 4
 
 /**
  * @brief Number of ADC2 channels
  */
-#define AIN_ADC2_CHANNELS 4
+#define AIN_ADC2_CHANNELS 2
 
 /* Public macros -------------------------------------------------------------*/
 

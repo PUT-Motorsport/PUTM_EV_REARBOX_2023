@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "logging_task.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -57,62 +58,32 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define BRAKE_LIGHT_Pin GPIO_PIN_13
-#define BRAKE_LIGHT_GPIO_Port GPIOC
+#define BACKUP_BRAKE_LIGHT_Pin GPIO_PIN_13
+#define BACKUP_BRAKE_LIGHT_GPIO_Port GPIOC
 #define RTDS_Pin GPIO_PIN_14
 #define RTDS_GPIO_Port GPIOC
-#define ASSI_BUZZER_Pin GPIO_PIN_15
-#define ASSI_BUZZER_GPIO_Port GPIOC
+#define XIAO_GPIO_Pin GPIO_PIN_15
+#define XIAO_GPIO_GPIO_Port GPIOC
 #define HSE_IN_Pin GPIO_PIN_0
 #define HSE_IN_GPIO_Port GPIOF
 #define HSE_OUT_Pin GPIO_PIN_1
 #define HSE_OUT_GPIO_Port GPIOF
-#define ASSI_LED_R_Pin GPIO_PIN_0
-#define ASSI_LED_R_GPIO_Port GPIOC
-#define ASSI_LED_G_Pin GPIO_PIN_1
-#define ASSI_LED_G_GPIO_Port GPIOC
-#define MONO_TEMPERATURE_Pin GPIO_PIN_2
-#define MONO_TEMPERATURE_GPIO_Port GPIOC
-#define WATER_PRESSURE1_Pin GPIO_PIN_3
-#define WATER_PRESSURE1_GPIO_Port GPIOC
-#define WATER_PRESSURE2_Pin GPIO_PIN_0
-#define WATER_PRESSURE2_GPIO_Port GPIOA
+#define BRAKE_LIGHT_Pin GPIO_PIN_0
+#define BRAKE_LIGHT_GPIO_Port GPIOC
+#define BACKUP_RTDS_Pin GPIO_PIN_1
+#define BACKUP_RTDS_GPIO_Port GPIOC
 #define WATER_TEMPERATURE1_Pin GPIO_PIN_1
 #define WATER_TEMPERATURE1_GPIO_Port GPIOA
 #define WATER_TEMPERATURE2_Pin GPIO_PIN_2
 #define WATER_TEMPERATURE2_GPIO_Port GPIOA
-#define ASSI_LED_B_Pin GPIO_PIN_3
-#define ASSI_LED_B_GPIO_Port GPIOA
 #define ANALOG_OFFSET1_Pin GPIO_PIN_4
 #define ANALOG_OFFSET1_GPIO_Port GPIOA
 #define ANALOG_OFFSET2_Pin GPIO_PIN_5
 #define ANALOG_OFFSET2_GPIO_Port GPIOA
-#define ANALOG_INPUT1_Pin GPIO_PIN_6
-#define ANALOG_INPUT1_GPIO_Port GPIOA
-#define ANALOG_INPUT2_Pin GPIO_PIN_7
-#define ANALOG_INPUT2_GPIO_Port GPIOA
-#define POTENTIOMETER_L_Pin GPIO_PIN_4
-#define POTENTIOMETER_L_GPIO_Port GPIOC
-#define POTENTIOMETER_R_Pin GPIO_PIN_5
-#define POTENTIOMETER_R_GPIO_Port GPIOC
-#define SENSE_OUT_Pin GPIO_PIN_0
-#define SENSE_OUT_GPIO_Port GPIOB
-#define SENSE_ADDRESS_IN0_Pin GPIO_PIN_1
-#define SENSE_ADDRESS_IN0_GPIO_Port GPIOB
-#define SENSE_ADDRESS_IN1_Pin GPIO_PIN_2
-#define SENSE_ADDRESS_IN1_GPIO_Port GPIOB
-#define PUMP2_Pin GPIO_PIN_10
-#define PUMP2_GPIO_Port GPIOB
-#define PUMP1_Pin GPIO_PIN_11
-#define PUMP1_GPIO_Port GPIOB
-#define CAN2_RX_Pin GPIO_PIN_12
-#define CAN2_RX_GPIO_Port GPIOB
-#define CAN2_TX_Pin GPIO_PIN_13
-#define CAN2_TX_GPIO_Port GPIOB
-#define FAN_R_Pin GPIO_PIN_14
-#define FAN_R_GPIO_Port GPIOB
-#define FAN_L_Pin GPIO_PIN_15
-#define FAN_L_GPIO_Port GPIOB
+#define WATER_PRESSURE2_Pin GPIO_PIN_4
+#define WATER_PRESSURE2_GPIO_Port GPIOC
+#define WATER_PRESSURE1_Pin GPIO_PIN_5
+#define WATER_PRESSURE1_GPIO_Port GPIOC
 #define SAFETY_RESET_Pin GPIO_PIN_6
 #define SAFETY_RESET_GPIO_Port GPIOC
 #define SAFETY_INT_Pin GPIO_PIN_7
@@ -121,12 +92,8 @@ void Error_Handler(void);
 #define SAFETY_SCL_GPIO_Port GPIOC
 #define SAFETY_SDA_Pin GPIO_PIN_9
 #define SAFETY_SDA_GPIO_Port GPIOC
-#define LOAD_CELL_SDIO_Pin GPIO_PIN_8
-#define LOAD_CELL_SDIO_GPIO_Port GPIOA
-#define LOAD_CELL_SCLK_Pin GPIO_PIN_9
-#define LOAD_CELL_SCLK_GPIO_Port GPIOA
-#define LOAD_CELL_DRDY_Pin GPIO_PIN_10
-#define LOAD_CELL_DRDY_GPIO_Port GPIOA
+#define STBY_CAN_Pin GPIO_PIN_10
+#define STBY_CAN_GPIO_Port GPIOA
 #define CAN_RX_Pin GPIO_PIN_11
 #define CAN_RX_GPIO_Port GPIOA
 #define CAN_TX_Pin GPIO_PIN_12
@@ -147,10 +114,6 @@ void Error_Handler(void);
 #define SPI_SCLK_GPIO_Port GPIOB
 #define SPI_MISO_Pin GPIO_PIN_4
 #define SPI_MISO_GPIO_Port GPIOB
-#define SENSE_ENABLE_PUMPS_Pin GPIO_PIN_5
-#define SENSE_ENABLE_PUMPS_GPIO_Port GPIOB
-#define SENSE_ENABLE_FANS_Pin GPIO_PIN_6
-#define SENSE_ENABLE_FANS_GPIO_Port GPIOB
 #define I2C_SDA_Pin GPIO_PIN_7
 #define I2C_SDA_GPIO_Port GPIOB
 #define BOOT_SELECT_Pin GPIO_PIN_8
@@ -160,16 +123,6 @@ void Error_Handler(void);
 /**
  * @brief Human-friendly aliases
  */
-
-// TIM2
-#define htim_pump htim2
-#define TIM_CHANNEL_PUMP1 TIM_CHANNEL_4
-#define TIM_CHANNEL_PUMP2 TIM_CHANNEL_3
-
-// TIM15
-#define htim_fan htim15
-#define TIM_CHANNEL_FAN_L TIM_CHANNEL_2
-#define TIM_CHANNEL_FAN_R TIM_CHANNEL_1
 
 // ADC1
 #define ADC_CHANNEL_MONO_TEMPERATURE 0
@@ -200,6 +153,16 @@ void Error_Handler(void);
 #define PIN_WHEEL_FR 13
 #define PIN_WHEEL_RL 14
 #define PIN_WHEEL_RR 15
+
+// LOGGING SETTINGS
+
+/* Available:
+ * 0 - ERR
+ * 1 - WARN
+ * 2 - INFO
+ * 3 - DEBUG
+ */
+#define LOG_LEVEL 2
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

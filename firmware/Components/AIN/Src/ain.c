@@ -9,7 +9,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "ain.h"
 #include "main.h"
-#include <math.h>
+#include <math.h>"
 
 /* Typedefs ------------------------------------------------------------------*/
 
@@ -21,20 +21,16 @@
 #define REFERENCE_TEMPERATURE 25.0f
 
 /* Private variables ---------------------------------------------------------*/
-AIN_Handle_TypeDef hain_mono_temperature = {1000, 3000, 1000, 2000, 4.09f, &AIN_ADC1_REGISTER[ADC_CHANNEL_MONO_TEMPERATURE]};
+
 AIN_Handle_TypeDef hain_coolant_pressure_in = {2038, 1000, 3000, 1000, 1.f, &AIN_ADC1_REGISTER[ADC_CHANNEL_COOLANT_IN_PRESSURE]};
 AIN_Handle_TypeDef hain_coolant_pressure_out = {2038, 1000, 3000, 1000, 1.f, &AIN_ADC1_REGISTER[ADC_CHANNEL_COOLANT_OUT_PRESSURE]};
 AIN_Handle_TypeDef hain_coolant_temperature_in = {2038, 1000, 3000, 1000, 1.2f, &AIN_ADC1_REGISTER[ADC_CHANNEL_COOLANT_IN_TEMPERATURE]};
 AIN_Handle_TypeDef hain_coolant_temperature_out = {2038, 1000, 3000, 1000, 1.2f, &AIN_ADC1_REGISTER[ADC_CHANNEL_COOLANT_OUT_TEMPERATURE]};
 AIN_Handle_TypeDef hain_oil_temperature_l = {1000, 3000, 1000, 2000, 4.09f, &AIN_ADC2_REGISTER[ADC_CHANNEL_OIL_L_TEMPERATURE]};
 AIN_Handle_TypeDef hain_oil_temperature_r = {1000, 3000, 1000, 2000, 4.09f, &AIN_ADC2_REGISTER[ADC_CHANNEL_OIL_R_TEMPERATURE]};
-AIN_Handle_TypeDef hain_suspension_potentiometer_l = {1000, 3000, 1000, 2000, 4.09f, &AIN_ADC2_REGISTER[ADC_CHANNEL_SUSPENSION_POTENTIOMETER_L]};
-AIN_Handle_TypeDef hain_suspension_potentiometer_r = {1000, 3000, 1000, 2000, 4.09f, &AIN_ADC2_REGISTER[ADC_CHANNEL_SUSPENSION_POTENTIOMETER_R]};
-
 /* Public variables ----------------------------------------------------------*/
 uint16_t AIN_ADC1_REGISTER[AIN_ADC1_CHANNELS];
 uint16_t AIN_ADC2_REGISTER[AIN_ADC2_CHANNELS];
-
 /* Private function prototypes -----------------------------------------------*/
 
 /* Public function prototypes ------------------------------------------------*/
