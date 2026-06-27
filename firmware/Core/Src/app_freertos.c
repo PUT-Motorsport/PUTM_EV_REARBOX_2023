@@ -25,7 +25,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "logging_task.h"
 #include "communication_task.h"
 #include "interface_task.h"
 #include "led_test_task.h"
@@ -86,18 +85,6 @@ const osThreadAttr_t ledTestTask_attributes = {
   .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
-/* Definitions for loggingTask */
-osThreadId_t loggingTaskHandle;
-const osThreadAttr_t loggingTask_attributes = {
-  .name = "loggingTask",
-  .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 256 * 4
-};
-/* Definitions for loggingMessagesQueue */
-osMessageQueueId_t loggingMessagesQueueHandle;
-const osMessageQueueAttr_t loggingMessagesQueue_attributes = {
-  .name = "loggingMessagesQueue"
-};
 /* Definitions for dataMutex */
 osMutexId_t dataMutexHandle;
 const osMutexAttr_t dataMutex_attributes = {
@@ -119,7 +106,6 @@ extern void Interface_Task(void *argument);
 extern void Communication_Task(void *argument);
 extern void Safety_Task(void *argument);
 extern void Led_Test_Task(void *argument);
-extern void StartLoggingTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -151,10 +137,6 @@ void MX_FREERTOS_Init(void) {
     /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
-  /* Create the queue(s) */
-  /* creation of loggingMessagesQueue */
-  loggingMessagesQueueHandle = osMessageQueueNew (16, sizeof(LogMessage_t), &loggingMessagesQueue_attributes);
-
   /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -174,9 +156,6 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of ledTestTask */
   ledTestTaskHandle = osThreadNew(Led_Test_Task, NULL, &ledTestTask_attributes);
-
-  /* creation of loggingTask */
-  loggingTaskHandle = osThreadNew(StartLoggingTask, NULL, &loggingTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */

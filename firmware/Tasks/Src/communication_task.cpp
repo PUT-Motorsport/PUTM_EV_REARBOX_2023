@@ -13,7 +13,6 @@
 #include "fdcan.h"
 #include "PUTM_CAN_M.h"
 #include "can_driver.hpp"
-//#include "iwdg.h"
 
 /* Typedefs ------------------------------------------------------------------*/
 
@@ -62,9 +61,9 @@ void Communication_Task(void* argument)
             }
         });
 
-    can_m.RegisterCallback<PUTM_CAN_M_front_data_main_t>(
-        PUTM_CAN_M_FRONT_DATA_MAIN_FRAME_ID,
-        [](const PUTM_CAN_M_front_data_main_t& front_data) {
+    can_m.RegisterCallback<PUTM_CAN_M_front_data_t>(
+        PUTM_CAN_M_FRONT_DATA_FRAME_ID,
+        [](const PUTM_CAN_M_front_data_t& front_data) {
             if (osMutexAcquire(dataMutexHandle, osWaitForever) == osOK)
             {
                 data.brake_light = front_data.is_braking;
@@ -108,7 +107,7 @@ void Communication_Task(void* argument)
         };
         can_m.Send(PUTM_CAN_M_REARBOX_MISCELLANEOUS_FRAME_ID, rearbox_miscellaneous);
 
-        HAL_IWDG_Refresh(&hiwdg);
+       // HAL_IWDG_Refresh(&hiwdg);
         osDelay(100);
     }
 }

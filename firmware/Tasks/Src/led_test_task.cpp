@@ -11,8 +11,6 @@
 #include "FreeRTOS.h"
 #include "cmsis_os2.h"
 #include "data.h"
-//We need this to use LOG levels, if this proves messy switch to numerical
-#include "logging_task.h"
 
 /* Typedefs ------------------------------------------------------------------*/
 

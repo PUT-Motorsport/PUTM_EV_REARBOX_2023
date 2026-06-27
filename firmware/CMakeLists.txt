@@ -16,13 +16,15 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
+
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
 # Set the project name
-set(CMAKE_PROJECT_NAME firmware)
+set(CMAKE_PROJECT_NAME rearbox)
+
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -31,8 +33,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# Enable CMake support for ASM, C and C++ languages
-enable_language(C CXX ASM)
+# Enable CMake support for ASM and C languages
+enable_language(C ASM CXX)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
@@ -40,28 +42,49 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
-# Add the CAN library (builds the putm_ev_can target)
 add_subdirectory(${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY)
-
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
 )
 
+file(GLOB CXX_SRC1 "${PROJECT_SOURCE_DIR}/Core/Src/*.cpp")
+message(CXX_SRC1=${CXX_SRC1})
+
+file(GLOB CXX_SRC2 "${PROJECT_SOURCE_DIR}/Tasks/Src/*.cpp")
+message(CXX_SRC2=${CXX_SRC2})
+
+file(GLOB CXX_SRC3 "${PROJECT_SOURCE_DIR}/Components/DATA/Src/*.c")
+message(CXX_SRC3=${CXX_SRC3})
+
+file(GLOB CXX_SRC4 "${PROJECT_SOURCE_DIR}/Components/AIN/Src/*.c")
+message(CXX_SRC4=${CXX_SRC4})
+
+file(GLOB CXX_SRC5 "${PROJECT_SOURCE_DIR}/Components/TCA6416A/Src/*.c")
+message(CXX_SRC5=${CXX_SRC5})
+
+
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+    ${CXX_SRC1}
+    ${CXX_SRC2}
+    ${CXX_SRC3}
+    ${CXX_SRC4}
+    ${CXX_SRC5}
     # Add user sources here
-    ${PROJECT_SOURCE_DIR}/Tasks/Src/communication_task.cpp
 )
+
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
-    ${PROJECT_SOURCE_DIR}/Core/Inc
-    ${PROJECT_SOURCE_DIR}/Tasks/Inc
-    ${PROJECT_SOURCE_DIR}/Components
-    ${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/include
-    ${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/dbc/generated
+    "${PROJECT_SOURCE_DIR}/Tasks/Inc"
+    "${PROJECT_SOURCE_DIR}/Components" 
+    "${PROJECT_SOURCE_DIR}/Components/AIN/Inc"
+    "${PROJECT_SOURCE_DIR}/Components/DATA/Inc"
+    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/include"
+    "${PROJECT_SOURCE_DIR}/Components/PUTM_EV_CAN_LIBRARY/dbc/generated"
+    "${PROJECT_SOURCE_DIR}/Components/TCA6416A/Inc"
+     # Add user defined include paths
 )
 
 # Add project symbols (macros)
@@ -69,12 +92,12 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined symbols
 )
 
-# Remove wrong libob.a library dependency when using cpp files
-list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
-
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
     putm_ev_can
     # Add user defined libraries
 )
+
+#remove main.c from MX_Application_Src
+# ist(REMOVE_ITEM MX_Application_Src "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
