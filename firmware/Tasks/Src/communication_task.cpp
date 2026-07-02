@@ -9,31 +9,73 @@
 /* Includes ------------------------------------------------------------------*/
 #include "communication_task.h"
 #include "cmsis_os2.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 #include "data.h"
 #include "fdcan.h"
 #include "PUTM_CAN_M.h"
 #include "can_driver.hpp"
 
 /* Typedefs ------------------------------------------------------------------*/
+enum class CanRxMsgType : uint8_t { PC_MAIN_DATA, FRONT_DATA };
+
+struct CanRxMsg {
+    CanRxMsgType type;
+    union {
+        PUTM_CAN_M_pc_main_data_t pc_main;
+        PUTM_CAN_M_front_data_t   front;
+    };
+};
 
 /* Defines -------------------------------------------------------------------*/
+#define CAN_RX_QUEUE_LEN 16
 
 /* Macros --------------------------------------------------------------------*/
 
 /* Private variables ---------------------------------------------------------*/
+static QueueHandle_t can_rx_queue;
 
 /* Public variables ----------------------------------------------------------*/
 extern osMutexId_t dataMutexHandle;
 
 /* Private function prototypes -----------------------------------------------*/
+static void process_rx_queue(void);
 
 /* Public functions ----------------------------------------------------------*/
+
+static void process_rx_queue(void)
+{
+    CanRxMsg msg;
+    while (xQueueReceive(can_rx_queue, &msg, 0) == pdTRUE)
+    {
+        if (osMutexAcquire(dataMutexHandle, osWaitForever) != osOK) continue;
+
+        switch (msg.type)
+        {
+        case CanRxMsgType::PC_MAIN_DATA:
+            data.rtd        = msg.pc_main.rtd;
+            data.rtd_2_prev = data.rtd_2;
+            data.rtd_2      = data.rtd;
+            if (data.rtd_2_prev == 0 && data.rtd_2 == 1) data.rtd_edge = 1;
+            if (data.rtd_2_prev == 0 && data.rtd_2 == 0) data.rtd_edge = 0;
+            break;
+
+        case CanRxMsgType::FRONT_DATA:
+            data.brake_light = msg.front.is_braking;
+            break;
+        }
+
+        osMutexRelease(dataMutexHandle);
+    }
+}
 
 void Communication_Task(void* argument)
 {
     data.rtd_2      = -1;
     data.rtd_2_prev = -1;
     data.rtd_edge   =  0;
+
+    can_rx_queue = xQueueCreate(CAN_RX_QUEUE_LEN, sizeof(CanRxMsg));
 
     putm_ev_can::CanDriver can_m;
 
@@ -45,34 +87,20 @@ void Communication_Task(void* argument)
     can_m.RegisterCallback<PUTM_CAN_M_pc_main_data_t>(
         PUTM_CAN_M_PC_MAIN_DATA_FRAME_ID,
         [](const PUTM_CAN_M_pc_main_data_t& pc_main_data) {
-            if (osMutexAcquire(dataMutexHandle, osWaitForever) == osOK)
-            {
-                data.rtd        = pc_main_data.rtd;
-                data.rtd_2_prev = data.rtd_2;
-                data.rtd_2      = data.rtd;
-
-                if (data.rtd_2_prev == 0 && data.rtd_2 == 1)
-                    data.rtd_edge = 1;
-
-                if (data.rtd_2_prev == 0 && data.rtd_2 == 0)
-                    data.rtd_edge = 0;
-
-                osMutexRelease(dataMutexHandle);
-            }
+            CanRxMsg msg{ .type = CanRxMsgType::PC_MAIN_DATA, .pc_main = pc_main_data };
+            xQueueSendFromISR(can_rx_queue, &msg, nullptr);
         });
 
     can_m.RegisterCallback<PUTM_CAN_M_front_data_t>(
         PUTM_CAN_M_FRONT_DATA_FRAME_ID,
         [](const PUTM_CAN_M_front_data_t& front_data) {
-            if (osMutexAcquire(dataMutexHandle, osWaitForever) == osOK)
-            {
-                data.brake_light = front_data.is_braking;
-                osMutexRelease(dataMutexHandle);
-            }
+            CanRxMsg msg{ .type = CanRxMsgType::FRONT_DATA, .front = front_data };
+            xQueueSendFromISR(can_rx_queue, &msg, nullptr);
         });
 
     for (;;)
     {
+        process_rx_queue();
         PUTM_CAN_M_rearbox_safety_t rearbox_safety = {
             .safety_tsmp          = safety.TSMP,
             .safety_rfu           = 0,
